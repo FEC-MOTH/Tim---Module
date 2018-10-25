@@ -1,8 +1,7 @@
-const server = require('./index');
-
-const router = require('./routes');
+const app = require('./index');
 
 const port = 1128;
 
-server.listen(port, () => console.log(`listening on ${port}`));
-server.use('/shoedidas', router);
+app.listen(port, () => console.log(`listening on ${port}`));
+
+// module.exports = app;?

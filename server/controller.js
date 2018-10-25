@@ -1,9 +1,9 @@
-const express = require ('express');
-const dbModel = require('../database/models.js')
+const express = require('express');
+const dbModel = require('../database/models.js');
 
 const Controller = {
   get: (req, res) => {
-    res.send('hello from get');
+    res.status(200).send('hello from get');
   },
 
   post: (req, res) => {
@@ -16,9 +16,7 @@ const Controller = {
 
   delete: (req, res) => {
     res.send('hello from delete');
-  }
+  },
 };
 
-
-
-module.exports = { Controller }
+module.exports = { Controller };
