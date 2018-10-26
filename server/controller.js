@@ -1,9 +1,13 @@
 const express = require('express');
-const dbModel = require('../database/models.js');
+const db = require('../database/models.js');
+
+// TO USE: db.Products.aMethodHere
 
 const Controller = {
   get: (req, res) => {
-    res.status(200).send('hello from get');
+    db.Products.findAll({})
+      .then(data => res.status(200).send(data))
+      .catch(err => console.error(err));
   },
 
   post: (req, res) => {

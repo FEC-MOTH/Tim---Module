@@ -15,8 +15,7 @@
   "scripts": {
     "build": "nodemon server/server.js",
     "start": "webpack --d -w",
-    "test": "jest --watchAll",
-    "exit": "--forceExit"
+    "test": "jest --watchAll"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",

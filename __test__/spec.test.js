@@ -7,9 +7,14 @@ const server = require('../server/index');
 
 iconv.encodings = encodings;
 
-describe('Testing whether or not path is connecting', () => {
-  it('should GET response request 200', async () => {
+describe('GET should access DB', () => {
+  it('should send response back as 200', async () => {
     const response = await request(server).get('/shoedidas/product/details');
-    expect(response.statusCode).toBe(200);
+    expect(response.status).toBe(200);
+  });
+
+  it('should return information from DB', async () => {
+    const response = await request(server).get('/shoedidas/product/details');
+    expect(response.body.length).toBe(response.body.length);
   });
 });
