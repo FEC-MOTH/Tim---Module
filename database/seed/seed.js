@@ -1,18 +1,6 @@
 const { fake } = require('faker');
 const db = require('../models');
 
-// console.log(fake('{{commerce.department}}'));
-// const Products = dbConnection.define('products',
-//   {
-//     id              : { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
-//     item_name       : { types: Sequelize.STRING },
-//     category_name   : { type: Sequelize.STRING },
-//     product_type    : { type: Sequelize.STRING },
-//     description     : { type: Sequelize.STRING },
-//     product_details : { type: Sequelize.STRING },
-//     image           : { type: Sequelize.STRING }
-//   },
-
 const fakeProducts = [
   {
     item_name: fake('{{name.jobDescriptor}}'),

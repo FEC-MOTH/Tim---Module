@@ -5,7 +5,7 @@ const dbConnection = require('./index.js');
 
 
 1 - 10 = basketball shoes
-11-20 = football shoes 
+11-20 = football shoes
 21-30 = sandles and slides
 31-40 = soccer
 41-50 = original shoes
@@ -32,7 +32,7 @@ const Products = dbConnection.define(
 
   {
     timestamps: false,
-  }
+  },
 );
 
 Products.sync()
