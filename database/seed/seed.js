@@ -72,16 +72,12 @@ const fakeDataGenerator = (arr, n) => {
   const selected = shuffled.slice(0, n);
   selected.forEach((value) => {
     db.Products.create({
-      item_name: value.titel,
+      item_name: value.title,
       category_name: 'athletic',
       product_type: 'running',
       description: value.description,
-      specification: mockSpecifications(
-        describeRun,
-        describeBball,
-        describeFBall,
-        describeApperal,
-        describeAcc,
+      specification: JSON.stringify(
+        mockSpecifications(describeRun, describeBball, describeFBall, describeApperal, describeAcc),
       ),
       catchphrase: 'Energy from the ground up!',
       price: value.price,
@@ -91,7 +87,7 @@ const fakeDataGenerator = (arr, n) => {
   });
 };
 
-fakeDataGenerator(runningShoes);
+fakeDataGenerator(runningShoes, 15);
 
 // fakeDataGenerator(fakeProducts, 9);
 
