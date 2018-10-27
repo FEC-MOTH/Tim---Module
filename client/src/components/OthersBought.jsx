@@ -2,7 +2,24 @@ import React from 'react';
 
 const OthersBought = props => (
   <div>
-    <div>Hello from ProductDetails</div>
+    <div className="title">Others Also Bought</div>
+    <div className="imgDiv" align="center">
+      <span className="othersBoughtImg">
+        <img className="productImg" src={require('file-loader!./images/doge.png')} />
+        <div>Name of Product</div>
+        <div>$100</div>
+      </span>
+      <span className="othersBoughtImg">
+        <img className="productImg" src={require('file-loader!./images/doge.png')} />
+        <div>Name of Product</div>
+        <div>$100</div>
+      </span>
+      <span className="othersBoughtImg">
+        <img className="productImg" src={require('file-loader!./images/doge.png')} />
+        <div>Name of Product</div>
+        <div>$100</div>
+      </span>
+    </div>
   </div>
 );
 export default OthersBought;

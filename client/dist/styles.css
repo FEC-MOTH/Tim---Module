@@ -1,0 +1,38 @@
+.productImg {
+  width: 150px;
+}
+
+.title {
+  text-align: center;
+  font-weight: bold;
+}
+
+.imgDiv {
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.recentImg {
+  margin: 100px;
+  display: inline-block;
+  margin: 0 40px 0 0;
+  width: 150px;
+  position: relative;
+}
+
+.recommendationsImg {
+  margin: 100px;
+  display: inline-block;
+  margin: 0 40px 0 0;
+  width: 150px;
+  position: relative;
+}
+
+.othersBoughtImg {
+  margin: 50px;
+  display: inline-block;
+  margin: 0 40px 0 0;
+  width: 150px;
+  position: relative;
+}

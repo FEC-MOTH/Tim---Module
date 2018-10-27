@@ -12,6 +12,17 @@ export default class App extends Component {
     this.state = {};
   }
 
+  componentDidMount() {
+    this.fetchData;
+  }
+
+  fetchData() {
+    axios
+      .get('shoedidas/product/details')
+      .then(data => res.status(200).send(data))
+      .catch(err => console.error(err));
+  }
+
   render() {
     return (
       <div>
@@ -20,16 +31,13 @@ export default class App extends Component {
           <ProductDetails />
         </div>
         <div>
-          <Specifications />
-        </div>
-        <div>
           <Recommendations />
         </div>
         <div>
-          <RecentlyViewed />
+          <OthersBought />
         </div>
         <div>
-          <OthersBought />
+          <RecentlyViewed />
         </div>
       </div>
     );
