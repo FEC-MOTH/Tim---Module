@@ -9,12 +9,21 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      view: '', //can either change to description or specifications
       products: [],
     };
   }
 
   componentDidMount() {
     this.fetchData();
+  }
+
+  renderViews() {
+    let { view } = this.state;
+
+    if (view === 'description') {
+      console.log('I am the view');
+    }
   }
 
   fetchData() {

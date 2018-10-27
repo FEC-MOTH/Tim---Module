@@ -26,7 +26,10 @@ export default class ProductDetails extends Component {
         <div>
           <Description />
           <div>
-            <img className="productImg" src={require('file-loader!./images/doge.png')} />
+            <img
+              className="productImg"
+              src="http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw773341ba/zoom/BA8842_01_standard.jpg"
+            />
           </div>
           <Specifications />
         </div>
