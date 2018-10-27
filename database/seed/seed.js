@@ -7,7 +7,6 @@ const basketballShoes = require('./fakeAdidasData/basketballShoes.json');
 const accessories = require('./fakeAdidasData/accessories.json');
 const footballCleats = require('./fakeAdidasData/footballCleats.json');
 
-// 17 inside Files
 /*
 1 - 10 = basketball shoes
 11-20 = football shoes
@@ -51,7 +50,7 @@ const describeAcc = [
 const mockSpecifications = (...args) => {
   const tempArr = [];
   const returnArr = [];
-  args.forEach((valueArr, index) => {
+  args.forEach((valueArr) => {
     valueArr.forEach((value) => {
       tempArr.push(value);
     });
@@ -74,22 +73,24 @@ const fakeDataGenerator = (arr, n) => {
     db.Products.create({
       item_name: value.title,
       category_name: 'athletic',
-      product_type: 'running',
+      product_type: 'accessories',
       description: value.description,
       specification: JSON.stringify(
         mockSpecifications(describeRun, describeBball, describeFBall, describeApperal, describeAcc),
       ),
-      catchphrase: 'Energy from the ground up!',
+      catchphrase:
+        "Adidas accessories: for when you can't dress yourself and your parents have to.",
       price: value.price,
-      image1: value.images[0].id,
+      image1: JSON.stringify(value.images),
       image2: value.images[0].fileName,
     });
   });
 };
 
-fakeDataGenerator(runningShoes, 15);
-
-// fakeDataGenerator(fakeProducts, 9);
+// fakeDataGenerator(runningShoes, 15);
+// fakeDataGenerator(runningApperal, 15);
+// fakeDataGenerator(basketballShoes, 15);
+// fakeDataGenerator(runningShoes, 15);
 
 /*
 Example Schema;
@@ -117,105 +118,6 @@ Example Schema;
 
 Previously Constructed data
 const fakeProducts = [
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
   {
     item_name: fake('{{name.jobDescriptor}}'),
     category_name: fake('{{commerce.productName}}'),
