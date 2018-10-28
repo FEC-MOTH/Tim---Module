@@ -73,16 +73,14 @@ const fakeDataGenerator = (arr, n) => {
     db.Products.create({
       item_name: value.title,
       category_name: 'athletic',
-      product_type: 'accessories',
+      product_type: 'running',
       description: value.description,
       specification: JSON.stringify(
         mockSpecifications(describeRun, describeBball, describeFBall, describeApperal, describeAcc),
       ),
-      catchphrase:
-        "Adidas accessories: for when you can't dress yourself and your parents have to.",
+      catchphrase: 'Superboost for the super athelte',
       price: value.price,
-      image1: JSON.stringify(value.images),
-      image2: value.images[0].fileName,
+      image: JSON.stringify(value.images),
     });
   });
 };
@@ -90,7 +88,8 @@ const fakeDataGenerator = (arr, n) => {
 // fakeDataGenerator(runningShoes, 15);
 // fakeDataGenerator(runningApperal, 15);
 // fakeDataGenerator(basketballShoes, 15);
-// fakeDataGenerator(runningShoes, 15);
+fakeDataGenerator(runningShoes, 15);
+// fakeDataGenerator(accessories, 15);
 
 /*
 Example Schema;

@@ -9,9 +9,10 @@ export default class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      view: '', //can either change to description or specifications
       products: [],
+      view: '', //can either change to description or specifications
     };
+    this.fetchData = this.fetchData.bind(this);
   }
 
   componentDidMount() {
@@ -30,7 +31,7 @@ export default class App extends Component {
     axios
       .get('shoedidas/product/details')
       .then(data => {
-        let products = data.data;
+        let products = data.data.slice(0, 10);
         this.setState({
           products,
         });
@@ -39,21 +40,29 @@ export default class App extends Component {
   }
 
   render() {
+    //One Product for details
+    //6 for recommendation, othersbought & recentlyviewed
+    const productArr = this.state.products;
+
+    const randomOneProduct = productArr.sort(() => 0.5 - Math.random());
+    let oneProduct = randomOneProduct.slice(0, 1);
+
+    const random = productArr.sort(() => 0.5 - Math.random());
+    let selected = random.slice(0, 4);
+
     return (
       <div>
-        HELLO!
-        <div>
-          <ProductDetails />
-        </div>
-        <div>
-          <Recommendations />
-        </div>
-        <div>
-          <OthersBought />
-        </div>
-        <div>
-          <RecentlyViewed />
-        </div>
+        {oneProduct.map((value, i) => (
+          <ProductDetails products={value} />
+        ))}
+
+        {selected.map((value, i) => (
+          <div>
+            <Recommendations products={value} />
+            <OthersBought products={value} />
+            <RecentlyViewed products={value} />
+          </div>
+        ))}
       </div>
     );
   }

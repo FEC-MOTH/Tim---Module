@@ -2,9 +2,9 @@ import React from 'react';
 
 const Description = props => (
   <div>
-    <h2>Product Name Goes Here</h2>
-    <p>Product CatchPhrase Here</p>
-    <p>Product description goes here</p>
+    <h2>{props.products.item_name}</h2>
+    <p>{props.products.catchphrase}</p>
+    <p>{props.products.description}</p>
   </div>
 );
 

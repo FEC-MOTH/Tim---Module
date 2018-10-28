@@ -10,11 +10,24 @@ export default class ProductDetails extends Component {
     super(props);
     this.state = {
       description: '',
-      specification: '',
+      products: [],
     };
   }
+  //figure this out after;
+  // componentDidMount() {
+  //   this.setProps();
+  // }
+
+  // setProps() {
+  //   this.setState({
+  //     products: this.props.products,
+  //   });
+  // }
 
   render() {
+    const specifications = this.props.products.specification;
+    const specArr = JSON.parse(specifications);
+
     return (
       <div>
         <div>
@@ -24,16 +37,42 @@ export default class ProductDetails extends Component {
           {/* Button to render another Div to show Specifications */}
         </div>
         <div>
-          <Description />
+          <Description products={this.props.products} />
           <div>
-            <img
-              className="productImg"
-              src="http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/dw773341ba/zoom/BA8842_01_standard.jpg"
-            />
+            <img className="productImg" src={require('file-loader!./images/doge.png')} />
           </div>
-          <Specifications />
+          <Specifications specs={specArr} />
         </div>
       </div>
     );
   }
 }
+
+// const ProductDetails = props => (
+//   <div>
+//     <div>
+//       {console.log(props.products)}
+//       <button>Description</button>
+//       {/* Button renders another Div to show either description*/}
+//       <button>Specifications</button>
+//       {/* Button to render another Div to show Specifications */}
+//     </div>
+//     <div>
+//       <Description products={props.products} />
+//     </div>
+//     <div>
+//       <div>
+//         {/* <img
+//           className="productImg"
+//           src={`http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/{id}/zoom/{fileName}?sh=1024`}
+//         /> */}
+//         <img className="productImg" src={require('file-loader!./images/doge.png')} />
+//       </div>
+//       {/* {props.JSON.parse(products).map((specArr, key) => (
+//         <Specifications products={specArr} />
+//       ))} */}
+//     </div>
+//   </div>
+// );
+
+// export default ProductDetails;

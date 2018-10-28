@@ -14,7 +14,7 @@
   },
   "scripts": {
     "build": "nodemon server/server.js",
-    "start": "webpack --d -w",
+    "start": "webpack -w",
     "test": "jest --watchAll"
   },
   "dependencies": {
