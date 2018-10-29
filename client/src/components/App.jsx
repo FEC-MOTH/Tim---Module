@@ -31,9 +31,11 @@ export default class App extends Component {
     axios
       .get('shoedidas/product/details')
       .then(data => {
-        let products = data.data.slice(0, 10);
+        let products = data.data;
+        let randomized = products.sort(() => 0.5 - Math.random());
+        let selected = randomized.slice(0, 15);
         this.setState({
-          products,
+          products: selected,
         });
       })
       .catch(err => console.error(err));

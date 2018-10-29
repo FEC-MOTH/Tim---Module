@@ -28,6 +28,9 @@ export default class ProductDetails extends Component {
     const specifications = this.props.products.specification;
     const specArr = JSON.parse(specifications);
 
+    const images = this.props.products.image;
+    const imagesArr = JSON.parse(images);
+
     return (
       <div>
         <div>
@@ -39,7 +42,12 @@ export default class ProductDetails extends Component {
         <div>
           <Description products={this.props.products} />
           <div>
-            <img className="productImg" src={require('file-loader!./images/doge.png')} />
+            <img
+              className="productImg"
+              src={`http://demandware.edgesuite.net/sits_pod20-adidas/dw/image/v2/aaqx_prd/on/demandware.static/-/Sites-adidas-products/en_US/${
+                imagesArr[0].id
+              }/zoom/${imagesArr[0].fileName}?sh=1024`}
+            />
           </div>
           <Specifications specs={specArr} />
         </div>

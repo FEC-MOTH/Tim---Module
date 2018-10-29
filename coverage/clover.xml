@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1540520419103" clover="3.2.0">
-  <project timestamp="1540520419104" name="All files">
-    <metrics statements="44" coveredstatements="38" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="4" elements="54" coveredelements="42" complexity="0" loc="44" ncloc="44" packages="3" files="6" classes="6">
+<coverage generated="1540838223093" clover="3.2.0">
+  <project timestamp="1540838223093" name="All files">
+    <metrics statements="44" coveredstatements="38" conditionals="0" coveredconditionals="0" methods="10" coveredmethods="4" elements="54" coveredelements="42" complexity="0" loc="44" ncloc="44" packages="4" files="6" classes="6">
       <package name="database">
         <metrics statements="15" coveredstatements="13" conditionals="0" coveredconditionals="0" methods="4" coveredmethods="2"/>
         <file name="index.js" path="C:\Users\timot\Desktop\HRLA25\FEC\modules\database\index.js">
@@ -20,10 +20,10 @@
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>
           <line num="21" count="1" type="stmt"/>
-          <line num="38" count="1" type="stmt"/>
-          <line num="39" count="1" type="stmt"/>
-          <line num="40" count="0" type="stmt"/>
+          <line num="41" count="1" type="stmt"/>
           <line num="42" count="1" type="stmt"/>
+          <line num="43" count="0" type="stmt"/>
+          <line num="45" count="1" type="stmt"/>
         </file>
       </package>
       <package name="env">
@@ -35,7 +35,7 @@
         </file>
       </package>
       <package name="server">
-        <metrics statements="27" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
+        <metrics statements="23" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
         <file name="controller.js" path="C:\Users\timot\Desktop\HRLA25\FEC\modules\server\controller.js">
           <metrics statements="10" coveredstatements="6" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="2"/>
           <line num="1" count="1" type="stmt"/>
@@ -65,7 +65,10 @@
           <line num="17" count="1" type="stmt"/>
           <line num="19" count="1" type="stmt"/>
         </file>
-        <file name="routes.js" path="C:\Users\timot\Desktop\HRLA25\FEC\modules\server\routes.js">
+      </package>
+      <package name="server.routes">
+        <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <file name="routes.js" path="C:\Users\timot\Desktop\HRLA25\FEC\modules\server\routes\routes.js">
           <metrics statements="4" coveredstatements="4" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
           <line num="1" count="1" type="stmt"/>
           <line num="2" count="1" type="stmt"/>

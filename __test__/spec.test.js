@@ -4,6 +4,7 @@ import encodings from 'iconv-lite/encodings';
 
 const request = require('supertest');
 const server = require('../server/index');
+const { Products } = require('../database/models.js');
 
 iconv.encodings = encodings;
 
@@ -17,4 +18,11 @@ describe('GET should access DB', () => {
     const response = await request(server).get('/shoedidas/product/details');
     expect(response.body.length).toBe(response.body.length);
   });
+});
+
+afterAll(() => {
+  Products.sequelize
+    .close()
+    .then(() => console.log('DB closed'))
+    .catch(err => console.error(err));
 });

@@ -15,7 +15,7 @@
   "scripts": {
     "build": "nodemon server/server.js",
     "start": "webpack -w",
-    "test": "jest --watchAll"
+    "test": "jest"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",
