@@ -46,11 +46,12 @@ export default class App extends Component {
     //6 for recommendation, othersbought & recentlyviewed
     const productArr = this.state.products;
 
-    const randomOneProduct = productArr.sort(() => 0.5 - Math.random());
-    let oneProduct = randomOneProduct.slice(0, 1);
+    const oneProduct = productArr.slice(0, 1);
 
-    const random = productArr.sort(() => 0.5 - Math.random());
-    let selected = random.slice(0, 4);
+    //for 4 Products
+    const selectedOtherBought = productArr.slice(1, 5);
+    const selectedRecent = productArr.slice(6, 10);
+    const selectedRecs = productArr.slice(11);
 
     return (
       <div>
@@ -60,7 +61,7 @@ export default class App extends Component {
           ))}
         </div>
         <div>
-          {selected.map((value, i) => (
+          {selectedRecent.map((value, i) => (
             <span className="recentDiv">
               <RecentlyViewed products={value} />
             </span>
@@ -68,7 +69,7 @@ export default class App extends Component {
         </div>
 
         <div>
-          {selected.map((value, i) => (
+          {selectedOtherBought.map((value, i) => (
             <span className="othersBoughtDiv">
               <OthersBought products={value} />
             </span>
@@ -76,7 +77,7 @@ export default class App extends Component {
         </div>
 
         <div>
-          {selected.map((value, i) => (
+          {selectedRecs.map((value, i) => (
             <span className="recsDiv">
               <Recommendations products={value} />
             </span>
