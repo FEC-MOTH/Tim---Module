@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Recommendations = props => (
-  <div className="recsDiv">
+  <div>
     <div className="title">You May Also Like</div>
     <div className="imgDiv" align="center">
       <span className="recommendationsImg">

@@ -38,10 +38,16 @@
 }
 
 .othersBoughtDiv {
+  align-content: center;
+  display: inline-block;
 }
 
 .recentDiv {
+  align-content: center;
+  display: inline-block;
 }
 
 .recsDiv {
+  align-content: center;
+  display: inline-block;
 }

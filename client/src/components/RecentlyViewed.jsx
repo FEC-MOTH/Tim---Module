@@ -1,7 +1,7 @@
 import React from 'react';
 
 const RecentlyViewed = props => (
-  <div className="recentDiv">
+  <div>
     <div className="title">Recently Viewed</div>
     <div className="imgDiv" align="center">
       <span className="recentImg">

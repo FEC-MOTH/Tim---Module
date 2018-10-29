@@ -1,7 +1,7 @@
 import React from 'react';
 
 const OthersBought = props => (
-  <div className="othersBoughtDiv">
+  <div>
     <div className="title">Others Also Bought</div>
     <div className="imgDiv" align="center">
       <span className="othersBoughtImg">

@@ -52,17 +52,34 @@ export default class App extends Component {
 
     return (
       <div>
-        {oneProduct.map((value, i) => (
-          <ProductDetails products={value} />
-        ))}
+        <div>
+          {oneProduct.map((value, i) => (
+            <ProductDetails products={value} />
+          ))}
+        </div>
+        <div>
+          {selected.map((value, i) => (
+            <span className="recentDiv">
+              <RecentlyViewed products={value} />
+            </span>
+          ))}
+        </div>
 
-        {selected.map((value, i) => (
-          <div>
-            <Recommendations products={value} />
-            <OthersBought products={value} />
-            <RecentlyViewed products={value} />
-          </div>
-        ))}
+        <div>
+          {selected.map((value, i) => (
+            <span className="othersBoughtDiv">
+              <OthersBought products={value} />
+            </span>
+          ))}
+        </div>
+
+        <div>
+          {selected.map((value, i) => (
+            <span className="recsDiv">
+              <Recommendations products={value} />
+            </span>
+          ))}
+        </div>
       </div>
     );
   }
