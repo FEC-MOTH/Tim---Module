@@ -12,9 +12,17 @@ export default class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      description: '',
+      isToggle: false,
       products: [],
     };
+    this.toggleActive = this.toggleActive.bind(this);
+  }
+
+  toggleActive(e) {
+    const current = this.state.isToggle;
+    this.setState({
+      isToggle: !current,
+    });
   }
   //figure this out after;
   // componentDidMount() {
@@ -34,16 +42,26 @@ export default class ProductDetails extends Component {
     const images = this.props.products.image;
     const imagesArr = JSON.parse(images);
 
+    let toggle = this.toggleItems ? style.isToggle : style.toggleItems;
+    console.log(toggle);
     return (
       <div>
         <h1 style={style.h1}>Product Details</h1>
         <div className="wrapper" style={style.wrapper}>
           <ul className="toggleList" style={style.toggleList}>
-            <li className="toggleItems" style={style.toggleItems}>
+            <li
+              className={this.state.isToggle ? 'toggleItems' : 'isToggle'}
+              style={this.state.isToggle ? style.isToggle : style.toggleItems}
+              onClick={this.toggleActive}
+            >
               Description
             </li>
             {/* Button renders another Div to show either description */}
-            <li className="toggleItems" style={style.toggleItems}>
+            <li
+              className={this.state.isToggle ? 'isToggle toggleItems' : ' toggleItems'}
+              style={this.state.isToggle ? style.isToggle : style.toggleItems}
+              onClick={this.toggleActive}
+            >
               Specification
             </li>
             {/* Button to render another Div to show Specifications */}
