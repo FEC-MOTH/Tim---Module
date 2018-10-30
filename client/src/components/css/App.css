@@ -1,0 +1,12 @@
+h2 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-shrink: 0;
+  font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 0.5px;
+}

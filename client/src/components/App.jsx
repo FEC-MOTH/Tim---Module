@@ -5,6 +5,11 @@ import Recommendations from './Recommendations';
 import RecentlyViewed from './RecentlyViewed';
 import OthersBought from './OthersBought';
 
+// css
+import style from './css/App.css';
+
+console.log(style);
+
 export default class App extends Component {
   constructor(props) {
     super(props);
@@ -56,32 +61,44 @@ export default class App extends Component {
     return (
       <div>
         <div>
-          {oneProduct.map((value, i) => (
-            <ProductDetails products={value} />
-          ))}
-        </div>
-        <div>
-          {selectedRecent.map((value, i) => (
-            <span className="recentDiv">
-              <RecentlyViewed products={value} />
-            </span>
-          ))}
+          <div>
+            {oneProduct.map((value, i) => (
+              <ProductDetails products={value} />
+            ))}
+          </div>
         </div>
 
         <div>
-          {selectedOtherBought.map((value, i) => (
-            <span className="othersBoughtDiv">
-              <OthersBought products={value} />
-            </span>
-          ))}
-        </div>
+          <h2 style={style.h2}>Recently Viewed</h2>
+          <div>
+            {selectedRecent.map((value, i) => (
+              <span className="recentDiv">
+                <RecentlyViewed products={value} />
+              </span>
+            ))}
+          </div>
 
-        <div>
-          {selectedRecs.map((value, i) => (
-            <span className="recsDiv">
-              <Recommendations products={value} />
-            </span>
-          ))}
+          <div>
+            <h2 style={style.h2}>Others Also Bought</h2>
+            <div>
+              {selectedOtherBought.map((value, i) => (
+                <span className="othersBoughtDiv">
+                  <OthersBought products={value} />
+                </span>
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h2 style={style.h2}>You May Also Like</h2>
+            <div>
+              {selectedRecs.map((value, i) => (
+                <span className="recsDiv">
+                  <Recommendations products={value} />
+                </span>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     );

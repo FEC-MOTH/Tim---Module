@@ -6,7 +6,7 @@ const OthersBought = function(props) {
 
   return (
     <div>
-      <div className="title">Others Also Bought</div>
+      <div className="title" />
       <div className="imgDiv" align="center">
         <span className="othersBoughtImg">
           <img

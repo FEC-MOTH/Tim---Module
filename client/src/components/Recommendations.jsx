@@ -6,7 +6,7 @@ const Recommendations = function(props) {
 
   return (
     <div>
-      <div className="title">You May Also Like</div>
+      <div className="title" />
       <div className="imgDiv" align="center">
         <span className="recommendationsImg">
           <img
