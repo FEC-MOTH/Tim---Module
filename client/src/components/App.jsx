@@ -8,8 +8,6 @@ import OthersBought from './OthersBought';
 // css
 import style from './css/App.css';
 
-console.log(style);
-
 export default class App extends Component {
   constructor(props) {
     super(props);

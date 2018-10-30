@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Description from './Description';
 import Specifications from './Specifications';
 
+//css
+import style from './css/ProductDetails.css';
+
 // this is contructor;
 // it will handle login for rendering Description and Specifications;
 
@@ -33,11 +36,18 @@ export default class ProductDetails extends Component {
 
     return (
       <div>
-        <div>
-          <button>Description</button>
-          {/* Button renders another Div to show either description */}
-          <button>Specifications</button>
-          {/* Button to render another Div to show Specifications */}
+        <h1 style={style.h1}>Product Details</h1>
+        <div className="wrapper" style={style.wrapper}>
+          <ul className="toggleList" style={style.toggleList}>
+            <li className="toggleItems" style={style.toggleItems}>
+              Description
+            </li>
+            {/* Button renders another Div to show either description */}
+            <li className="toggleItems" style={style.toggleItems}>
+              Specification
+            </li>
+            {/* Button to render another Div to show Specifications */}
+          </ul>
         </div>
         <div>
           <Description products={this.props.products} />
