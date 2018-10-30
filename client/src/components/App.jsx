@@ -22,14 +22,6 @@ export default class App extends Component {
     this.fetchData();
   }
 
-  renderViews() {
-    let { view } = this.state;
-
-    if (view === 'description') {
-      console.log('I am the view');
-    }
-  }
-
   fetchData() {
     axios
       .get('shoedidas/product/details')
@@ -49,6 +41,7 @@ export default class App extends Component {
     //6 for recommendation, othersbought & recentlyviewed
     const productArr = this.state.products;
 
+    //for Description & Specification
     const oneProduct = productArr.slice(0, 1);
 
     //for 4 Products
