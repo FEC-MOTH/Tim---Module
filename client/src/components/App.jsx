@@ -50,13 +50,11 @@ export default class App extends Component {
     const selectedRecs = productArr.slice(11);
 
     return (
-      <div>
+      <div className="wrapper">
         <div>
-          <div>
-            {oneProduct.map((value, i) => (
-              <ProductDetails products={value} />
-            ))}
-          </div>
+          {oneProduct.map((value, i) => (
+            <ProductDetails products={value} />
+          ))}
         </div>
 
         <div>
