@@ -1,27 +1,16 @@
-.productImg {
-  width: 150px;
-}
 /* 
 .title {
   text-align: center;
   font-weight: bold;
 } */
 
-.imgDiv {
+/* .imgDiv {
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-}
+} */
 
 .recentImg {
-  margin: 100px;
-  display: inline-block;
-  margin: 0 40px 0 0;
-  width: 150px;
-  position: relative;
-}
-
-.recommendationsImg {
   margin: 100px;
   display: inline-block;
   margin: 0 40px 0 0;
@@ -47,10 +36,10 @@
   display: inline-block;
 }
 
-.recsDiv {
+/* .recsDiv {
   align-content: center;
   display: inline-block;
-}
+} */
 
 /* h2 {
   display: flex;

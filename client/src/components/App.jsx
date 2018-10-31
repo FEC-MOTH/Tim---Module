@@ -45,24 +45,44 @@ export default class App extends Component {
     const oneProduct = productArr.slice(0, 1);
 
     //for 4 Products
-    const selectedOtherBought = productArr.slice(1, 5);
-    const selectedRecent = productArr.slice(6, 10);
-    const selectedRecs = productArr.slice(11);
+    // const selectedOtherBought = productArr.slice(1, 5);
+    // const selectedRecent = productArr.slice(6, 10);
+    const selectedRecs = productArr.slice(0, 10);
 
     return (
       <div className="wrapper">
-        <div>
+        {/* <div>
           {oneProduct.map((value, i) => (
             <ProductDetails products={value} />
           ))}
+        </div> */}
+        <div className="mainRecDiv">
+          <div className="mainRecContainer">
+            <h2>You May Also Like</h2>
+            <div className="recRow">
+              <div className="recPadding">
+                <div className="recWrapper">
+                  <div className="recContainer">
+                    <div className="recTransformer">
+                      {selectedRecs.map((value, i) => (
+                        <span>
+                          <Recommendations products={value} />
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <div className="recentlyViewed">
+        {/* <div className="recentlyViewed">
           <div>
             <h2 style={style.h2}>Recently Viewed</h2>
-            <div>
+            <div className="recentDiv">
               {selectedRecent.map((value, i) => (
-                <span className="recentDiv">
+                <span>
                   <RecentlyViewed products={value} />
                 </span>
               ))}
@@ -73,28 +93,15 @@ export default class App extends Component {
         <div className="othersBought">
           <div>
             <h2 style={style.h2}>Others Also Bought</h2>
-            <div>
+            <div className="othersBoughtDiv">
               {selectedOtherBought.map((value, i) => (
-                <span className="othersBoughtDiv">
+                <span>
                   <OthersBought products={value} />
                 </span>
               ))}
             </div>
           </div>
-        </div>
-
-        <div className="recommended">
-          <div>
-            <h2 style={style.h2}>You May Also Like</h2>
-            <div>
-              {selectedRecs.map((value, i) => (
-                <span className="recsDiv">
-                  <Recommendations products={value} />
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
+        </div> */}
       </div>
     );
   }

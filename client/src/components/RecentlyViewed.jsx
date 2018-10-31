@@ -7,7 +7,6 @@ const RecentlyViewed = function(props) {
 
   return (
     <div>
-      <div className="title" />
       <div className="imgDiv" align="center">
         <span className="recentImg">
           <img

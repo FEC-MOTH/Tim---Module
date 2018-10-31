@@ -54,19 +54,48 @@ h2 {
   letter-spacing: 1.5px;
   font-size: 42px;
   line-height: 38px;
+  display: flex;
+  justify-content: center;
 }
 
-.recentlyViewed {
-  margin-top: 100px;
-  text-align: center;
+.mainRecDiv {
+  margin-top: 80px;
 }
 
-.recommended {
-  margin-top: 100px;
-  text-align: center;
+.mainRecContainer {
+  margin-top: 60px;
+  padding-bottom: 60px;
 }
 
-.othersBought {
-  margin-top: 100px;
-  text-align: center;
+.recRow {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.recPadding {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.recWrapper {
+  overflow: hidden;
+  position: relative;
+  display: -webkit-flex;
+  display: flex;
+  max-width: 1366px;
+  width: 91%;
+  margin-left: auto;
+  margin-right: auto;
+  flex-direction: row;
+}
+
+.recContainer {
+  width: 100%;
+  position: relative;
+  user-select: none;
+}
+
+.recTransformer {
+  display: flex;
 }

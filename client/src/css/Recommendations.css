@@ -1,0 +1,29 @@
+/* .recsDiv {
+  align-content: center;
+  display: inline-block;
+} */
+/* overflow: hidden;
+position: relative;
+display: -webkit-flex;
+display: flex;
+max-width: 1366px;
+width: 100%;
+margin-left: auto;
+margin-right: auto; */
+
+.itemWrapper {
+}
+
+.hockeyCard {
+}
+
+.productCard {
+}
+
+.productInfo {
+}
+
+.img {
+  width: 295px;
+  margin: 8px;
+}
