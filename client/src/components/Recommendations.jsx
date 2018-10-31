@@ -5,6 +5,18 @@ const Recommendations = function(props) {
   const images = props.products.image;
   const imagesArr = JSON.parse(images);
 
+  const price = props.products.price.toString();
+
+  const correctPrice = function(str) {
+    let counter = 0;
+    for (let i = 0; i < str.length; i++) {
+      if (str[i] === '0') {
+        counter += 1;
+      }
+    }
+    return counter === 2 ? '$' + str.slice(0, 2) : '$' + str.slice(0, 3);
+  };
+
   return (
     <div className="itemWrapper">
       <div className="hockeyCard">
@@ -18,7 +30,7 @@ const Recommendations = function(props) {
                 }/zoom/${imagesArr[0].fileName}?sh=1024`}
               />
               <div>{props.products.item_name}</div>
-              <div>{props.products.price}</div>
+              <div>{correctPrice(price)}</div>
             </div>
           </div>
         </span>
