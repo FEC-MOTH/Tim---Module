@@ -6,7 +6,7 @@ import RecentlyViewed from './RecentlyViewed';
 import OthersBought from './OthersBought';
 
 // css
-import style from './css/App.css';
+import style from '../css/App.css';
 
 export default class App extends Component {
   constructor(props) {
@@ -57,16 +57,20 @@ export default class App extends Component {
           ))}
         </div>
 
-        <div>
-          <h2 style={style.h2}>Recently Viewed</h2>
+        <div className="recentlyViewed">
           <div>
-            {selectedRecent.map((value, i) => (
-              <span className="recentDiv">
-                <RecentlyViewed products={value} />
-              </span>
-            ))}
+            <h2 style={style.h2}>Recently Viewed</h2>
+            <div>
+              {selectedRecent.map((value, i) => (
+                <span className="recentDiv">
+                  <RecentlyViewed products={value} />
+                </span>
+              ))}
+            </div>
           </div>
+        </div>
 
+        <div className="othersBought">
           <div>
             <h2 style={style.h2}>Others Also Bought</h2>
             <div>
@@ -77,7 +81,9 @@ export default class App extends Component {
               ))}
             </div>
           </div>
+        </div>
 
+        <div className="recommended">
           <div>
             <h2 style={style.h2}>You May Also Like</h2>
             <div>

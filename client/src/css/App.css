@@ -9,7 +9,7 @@
   src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2')
     format('woff2');
 }
-https://www.adidas.com/glass/assets/fonts/adidas/adineuePRO-Bold.woff2
+
 h1 {
   display: flex;
   justify-content: center;
@@ -21,6 +21,8 @@ h1 {
   text-transform: uppercase;
   margin-bottom: 20px;
   letter-spacing: 0.5px;
+  font-size: 42px;
+  line-height: 38px;
 }
 
 body {
@@ -41,4 +43,30 @@ body {
   padding-left: 10px;
   display: flex;
   justify-content: center;
+}
+
+h2 {
+  font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-size: 42px;
+  line-height: 38px;
+}
+
+.recentlyViewed {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.recommended {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.othersBought {
+  margin-top: 100px;
+  text-align: center;
 }

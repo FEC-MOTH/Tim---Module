@@ -1,5 +1,5 @@
 import React from 'react';
-import style from './css/Description.css';
+import style from '../css/Description.css';
 
 const Description = function(props) {
   const product = props.products;

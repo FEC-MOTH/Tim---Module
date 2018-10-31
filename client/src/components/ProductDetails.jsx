@@ -1,9 +1,9 @@
-import style from './css/ProductDetails.css';
 import React, { Component } from 'react';
 import Description from './Description';
 import Specifications from './Specifications';
 
 //css
+import style from '../css/ProductDetails.css';
 
 // this is contructor;
 // it will handle login for rendering Description and Specifications;
@@ -49,7 +49,7 @@ export default class ProductDetails extends Component {
         <div>
           <h1>Product Details</h1>
           <div>
-            <ul className="toggleList" style={style.toggleList}>
+            <ul className="toggleList">
               <li
                 className={this.state.isToggle ? 'toggleItems' : 'isToggle'}
                 onClick={this.toggleActive}
