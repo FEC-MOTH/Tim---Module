@@ -17,6 +17,19 @@
 }
 
 ul {
+  margin-right: 28px;
   width: 100%;
+  list-style-position: outside;
+}
+
+li {
+  margin-bottom: 20px;
+  margin-left: -30px;
+  line-height: 22px;
+}
+
+.other {
+  margin-right: 28px;
+  width: 90%;
   list-style-position: outside;
 }

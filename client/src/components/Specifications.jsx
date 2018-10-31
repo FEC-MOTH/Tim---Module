@@ -14,7 +14,7 @@ const Specifications = function(props) {
               <li>{spec}</li>
             ))}
           </ul>
-          <ul>
+          <ul className="other">
             {lastThree.map((spec, i) => (
               <li>{spec}</li>
             ))}
