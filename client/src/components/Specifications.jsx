@@ -1,14 +1,27 @@
 import React from 'react';
+import style from './css/Specifications.css';
 
-const Specifications = props => (
-  <div>
-    <div className="title">Specifications</div>
-    {props.specs.map((specs, i) => (
-      <ul>
-        <li>{specs}</li>
-      </ul>
-    ))}
-  </div>
-);
+const Specifications = function(props) {
+  const firstThree = props.specs.slice(0, 3);
+  const lastThree = props.specs.slice(3);
 
+  return (
+    <div className="mainSpec">
+      <div className="specParent">
+        <div className="specWrapper">
+          <ul>
+            {firstThree.map((spec, i) => (
+              <li>{spec}</li>
+            ))}
+          </ul>
+          <ul>
+            {lastThree.map((spec, i) => (
+              <li>{spec}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+    </div>
+  );
+};
 export default Specifications;

@@ -12,7 +12,7 @@ export default class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isToggle: false,
+      isToggle: true,
       products: [],
       // displayComp: true,
     };

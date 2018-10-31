@@ -1,4 +1,16 @@
-h2 {
+@font-face {
+  font-family: 'AdiNeuePro';
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/adineuePRO-Bold.woff2')
+    format('woff2');
+}
+
+@font-face {
+  font-family: 'AdihausDIN';
+  src: url('https://www.adidas.com/glass/assets/fonts/adidas/AdihausDIN-Regular.woff2')
+    format('woff2');
+}
+https://www.adidas.com/glass/assets/fonts/adidas/adineuePRO-Bold.woff2
+h1 {
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -27,4 +39,6 @@ body {
   max-width: 1240px;
   padding-right: 10px;
   padding-left: 10px;
+  display: flex;
+  justify-content: center;
 }

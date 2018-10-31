@@ -1,0 +1,22 @@
+/* .mainSpec {
+  display: flex;
+  flex-wrap: wrap;
+  width: 99%;
+} */
+
+.specParent {
+  display: flex;
+  flex-wrap: wrap;
+  width: 118%;
+  justify-content: space-between;
+}
+
+.specWrapper {
+  display: flex;
+  width: 1123px;
+}
+
+ul {
+  width: 100%;
+  list-style-position: outside;
+}

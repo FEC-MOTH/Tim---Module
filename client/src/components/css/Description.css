@@ -33,6 +33,8 @@ h5 {
   display: flex;
   width: 105%;
   height: 46%;
+  position: relative;
+  left: 16px;
 }
 
 .image {
@@ -40,8 +42,9 @@ h5 {
   justify-content: center;
   align-items: center;
   margin-left: -2.334%;
-  width: 100%;
+  width: 468px;
   position: relative;
+  right: 36px;
 }
 
 p {
