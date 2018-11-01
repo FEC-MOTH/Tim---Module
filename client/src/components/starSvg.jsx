@@ -2,6 +2,8 @@ import React from 'react';
 import style from '../css/starSvg.css';
 
 const SvgStar = function(props) {
+  const random = () => Math.floor(Math.random() * 100).toString() + '%';
+
   return (
     <svg className="gl-star-rating__star" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
       <linearGradient id="05d80a5f-9258-49d4-b43b-b4ca7883263b">

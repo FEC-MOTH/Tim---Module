@@ -4,6 +4,7 @@ import ProductDetails from './ProductDetails';
 import Recommendations from './Recommendations';
 import RecentlyViewed from './RecentlyViewed';
 import OthersBought from './OthersBought';
+import Carousel from './Carousel';
 
 // css
 import style from '../css/App.css';
@@ -56,7 +57,7 @@ export default class App extends Component {
     //for 4 Products
     // const selectedOtherBought = productArr.slice(1, 5);
     // const selectedRecent = productArr.slice(6, 10);
-    const selectedRecs = productArr.slice(1, 10);
+    const selectedRecs = productArr.slice(1, 5);
 
     return (
       <div className="wrapper">
@@ -85,6 +86,11 @@ export default class App extends Component {
               </div>
             </div>
           </div>
+        </div>
+
+        <div>
+          {/* for Recommendations */}
+          <Carousel products={selectedRecs} />
         </div>
 
         {/* <div className="mainRecContainer">
