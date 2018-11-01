@@ -14,8 +14,10 @@ export default class App extends Component {
     this.state = {
       products: [],
       view: '', //can either change to description or specifications
+      isToggle: false,
     };
     this.fetchData = this.fetchData.bind(this);
+    this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
   componentDidMount() {
@@ -36,6 +38,13 @@ export default class App extends Component {
       .catch(err => console.error(err));
   }
 
+  toggleFavorite() {
+    let toggle = this.state.isToggle;
+    this.setState({
+      isToggle: !toggle,
+    });
+  }
+
   render() {
     //One Product for details
     //6 for recommendation, othersbought & recentlyviewed
@@ -51,11 +60,12 @@ export default class App extends Component {
 
     return (
       <div className="wrapper">
-        {/* <div>
+        <div>
           {oneProduct.map((value, i) => (
             <ProductDetails products={value} />
           ))}
-        </div> */}
+        </div>
+
         <div className="mainRecDiv">
           <div className="mainRecContainer">
             <h2>You May Also Like</h2>
@@ -66,7 +76,11 @@ export default class App extends Component {
                     <div className="recTransformer">
                       {selectedRecs.map((value, i) => (
                         <span>
-                          <Recommendations products={value} />
+                          <Recommendations
+                            boolean={this.state.isToggle}
+                            toggle={this.toggleFavorite}
+                            products={value}
+                          />
                         </span>
                       ))}
                     </div>

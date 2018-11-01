@@ -44,6 +44,7 @@
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
     "react-image": "^1.5.1",
+    "react-svg": "^6.0.21",
     "regenerator-runtime": "^0.12.1",
     "request": "^2.88.0",
     "sequelize": "^4.41.0",

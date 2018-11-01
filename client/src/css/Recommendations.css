@@ -17,7 +17,9 @@ margin-right: auto; */
 .hockeyCard {
 }
 
-.productCard {
+.productCard:hover {
+  border: 0.02px solid #eed2d2;
+  cursor: pointer;
 }
 
 .productInfo {
@@ -26,4 +28,34 @@ margin-right: auto; */
 .img {
   width: 295px;
   margin: 8px;
+}
+
+.productDetails {
+  padding: 10px 10px 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  letter-spacing: 0.5px;
+  margin: -4px 0px 0px 10px;
+  max-height: 30px;
+  overflow: hidden;
+  font-size: 16px;
+  text-transform: uppercase;
+  padding-bottom: 14px;
+}
+
+.productPrice {
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.favorite {
+  position: relative;
+  bottom: 287px;
+  left: 83%;
+}
+.icon {
+  width: 23px;
 }

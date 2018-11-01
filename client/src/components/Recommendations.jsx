@@ -1,5 +1,6 @@
 import React from 'react';
 import style from '../css/Recommendations.css';
+import ReactSVG from 'react-svg';
 
 const Recommendations = function(props) {
   const images = props.products.image;
@@ -8,13 +9,7 @@ const Recommendations = function(props) {
   const price = props.products.price.toString();
 
   const correctPrice = function(str) {
-    let counter = 0;
-    for (let i = 0; i < str.length; i++) {
-      if (str[i] === '0') {
-        counter += 1;
-      }
-    }
-    return counter === 2 ? '$' + str.slice(0, 2) : '$' + str.slice(0, 3);
+    return str.length === 5 ? '$' + str.slice(0, 3) : '$' + str.slice(0, 2);
   };
 
   return (
@@ -29,8 +24,23 @@ const Recommendations = function(props) {
                   imagesArr[0].id
                 }/zoom/${imagesArr[0].fileName}?sh=1024`}
               />
-              <div>{props.products.item_name}</div>
-              <div>{correctPrice(price)}</div>
+              <div className="favorite">
+                <div className="toggleWishList">
+                  <img
+                    className="icon"
+                    src={
+                      props.boolean
+                        ? 'https://png.icons8.com/metro/1600/hearts.png'
+                        : 'https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/heart-outline-512.png'
+                    }
+                    onClick={props.toggle}
+                  />
+                </div>
+              </div>
+              <div className="productDetails">
+                <div className="productName">{props.products.item_name}</div>
+                <div className="productPrice">{correctPrice(price)}</div>
+              </div>
             </div>
           </div>
         </span>
