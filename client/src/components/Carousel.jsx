@@ -15,10 +15,11 @@ export default class Carousel extends Component {
   render() {
     return (
       <div className="carousel">
-        {this.props.products.map((value, index) => (
-          <Recommendations products={value} />
-        ))}
-
+        <div className="recCarousel">
+          {this.props.products.map((value, index) => (
+            <Recommendations products={value} />
+          ))}
+        </div>
         <LeftArrow />
         <RightArrow />
       </div>

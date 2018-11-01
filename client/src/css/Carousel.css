@@ -1,4 +1,8 @@
 .carousel {
-  min-width: 1014px;
   display: flex;
+}
+
+.recCarousel {
+  display: flex;
+  min-width: 1036px;
 }

@@ -73,15 +73,16 @@ export default class App extends Component {
             <div className="recPadding">
               <div className="recWrapper">
                 <div className="recTransformer">
-                  {selectedRecs.map((value, i) => (
-                    <span>
-                      <Recommendations
+                  {/* {selectedRecs.map((value, i) => ( */}
+                  <span>
+                    <Carousel products={selectedRecs} />
+                    {/* <Recommendations
                         boolean={this.state.isToggle}
                         toggle={this.toggleFavorite}
                         products={value}
-                      />
-                    </span>
-                  ))}
+                      /> */}
+                  </span>
+                  {/* ))} */}
                 </div>
               </div>
             </div>
@@ -90,7 +91,7 @@ export default class App extends Component {
 
         <div>
           {/* for Recommendations */}
-          <Carousel products={selectedRecs} />
+          {/* <Carousel products={selectedRecs} /> */}
         </div>
 
         {/* <div className="mainRecContainer">

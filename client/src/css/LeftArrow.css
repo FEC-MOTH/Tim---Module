@@ -1,0 +1,9 @@
+.LeftArrow {
+  position: absolute;
+  top: 27%;
+  width: 3%;
+  left: 10px;
+  color: #837979;
+  background-color: white;
+  text-align: center;
+}
