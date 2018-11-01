@@ -67,7 +67,7 @@ h2 {
 }
 
 .mainRecContainer {
-  margin-top: 60px;
+  margin-top: 140px;
   padding-bottom: 60px;
 }
 
@@ -80,6 +80,7 @@ h2 {
 .recPadding {
   padding-left: 15px;
   padding-right: 15px;
+  max-width: 984px;
 }
 
 .recWrapper {
@@ -88,18 +89,15 @@ h2 {
   display: -webkit-flex;
   display: flex;
   max-width: 1366px;
-  width: 91%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   flex-direction: row;
 }
 
-.recContainer {
+.recTransformer {
+  display: flex;
   width: 100%;
   position: relative;
   user-select: none;
-}
-
-.recTransformer {
-  display: flex;
 }

@@ -23,24 +23,27 @@ margin-right: auto; */
 }
 
 .productInfo {
+  max-width: 244px;
 }
 
 .img {
-  width: 295px;
-  margin: 8px;
+  width: 228px;
+  margin: 0px;
 }
 
 .productDetails {
-  padding: 10px 10px 20px;
+  padding: 0px 10px 20px;
   display: flex;
   flex-direction: column;
+  max-width: 244px;
+  margin-top: -38px;
 }
 
 .productName {
-  letter-spacing: 0.5px;
-  margin: -4px 0px 0px 10px;
-  max-height: 30px;
   overflow: hidden;
+  letter-spacing: 0.5px;
+  margin: -30px 0px 0px 10px;
+  max-height: 30px;
   font-size: 16px;
   text-transform: uppercase;
   padding-bottom: 14px;
@@ -53,8 +56,10 @@ margin-right: auto; */
 
 .favorite {
   position: relative;
-  bottom: 287px;
-  left: 83%;
+  bottom: 232px;
+  left: 79%;
+  width: 4%;
+  margin: 0%;
 }
 .icon {
   width: 23px;
