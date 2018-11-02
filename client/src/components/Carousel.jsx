@@ -68,8 +68,10 @@ export default class Carousel extends Component {
               <Recommendations products={value} />
             ))}
           </div>
-          <LeftArrow currentValue={this.state.currentValue} previous={this.previous} />
-          <RightArrow length={length} next={this.next} currentValue={this.state.currentValue} />
+          <div>
+            <LeftArrow currentValue={this.state.currentValue} previous={this.previous} />
+            <RightArrow length={length} next={this.next} currentValue={this.state.currentValue} />
+          </div>
         </div>
       </div>
     );
