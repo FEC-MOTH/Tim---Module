@@ -2,9 +2,13 @@ import React from 'react';
 import style from '../css/LeftArrow.css';
 
 const LeftArrow = function(props) {
+  console.log(props.currentValue);
   return (
     <div className="LeftArrow" onClick={props.previous}>
-      <i className="fas fa-angle-left fa-2x" aria-hidden="true" />
+      <i
+        className={props.currentValue <= 0 ? 'arrowHidden' : 'fas fa-angle-left fa-2x'}
+        aria-hidden="true"
+      />
     </div>
   );
 };

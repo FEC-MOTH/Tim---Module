@@ -10,6 +10,9 @@
   transition: color 0.5s ease;
 }
 
+.arrowHidden {
+  visibility: hidden;
+}
 .LeftArrow:hover {
   cursor: pointer;
   background-color: #2e2b2b;

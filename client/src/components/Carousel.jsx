@@ -3,14 +3,13 @@ import Recommendations from './Recommendations';
 import style from '../css/Carousel.css';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
-import { timingSafeEqual } from 'crypto';
 
 export default class Carousel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       products: [],
-      currentIndex: 0,
+      currentValue: 0,
       translateValue: 0,
     };
 
@@ -27,22 +26,23 @@ export default class Carousel extends Component {
   }
 
   next() {
-    if (this.state.currentIndex === this.state.products.length - 1) {
+    if (this.state.currentValue === this.state.products.length - 1) {
       return this.setState({
-        currentIndex: 0,
+        currentValue: 0,
         translateValue: 0,
       });
     }
     this.setState(prevState => ({
-      currentIndex: prevState.currentIndex + 1,
+      currentValue: prevState.currentValue + 1,
       translateValue: prevState.translateValue + -this.productWidth(),
     }));
   }
 
   previous() {
-    this.setState({
-      currentIndex: (this.state.currentIndex -= 1),
-    });
+    this.setState(prevState => ({
+      currentValue: this.state.currentValue - 1,
+      translateValue: prevState.translateValue - -this.productWidth(),
+    }));
   }
 
   productWidth() {
@@ -50,8 +50,8 @@ export default class Carousel extends Component {
   }
 
   render() {
-    console.log(this.state.products);
-    console.log(this.state.currentIndex);
+    console.log(this.state.currentValue);
+    console.log(this.state.translateValue);
     console.log(this.productWidth());
     return (
       <div className="carousel">
@@ -67,7 +67,7 @@ export default class Carousel extends Component {
               <Recommendations products={value} />
             ))}
           </div>
-          <LeftArrow previous={this.previous} />
+          <LeftArrow currentValue={this.state.currentValue} previous={this.previous} />
           <RightArrow next={this.next} />
         </div>
       </div>
