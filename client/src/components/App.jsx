@@ -31,7 +31,7 @@ export default class App extends Component {
       .then(data => {
         let products = data.data;
         let randomized = products.sort(() => 0.5 - Math.random());
-        let selected = randomized.slice(0, 15);
+        let selected = randomized.slice(0, 50);
         this.setState({
           products: selected,
         });
@@ -55,9 +55,9 @@ export default class App extends Component {
     const oneProduct = productArr.slice(0, 1);
 
     //for 4 Products
-    // const selectedOtherBought = productArr.slice(1, 5);
-    // const selectedRecent = productArr.slice(6, 10);
-    const selectedRecs = productArr.slice(1, 10);
+    const selectedRecs = productArr.slice(1, 17);
+    const selectedOtherBought = productArr.slice(17, 33);
+    const selectedRecent = productArr.slice(33);
 
     return (
       <div className="wrapper">
@@ -72,24 +72,38 @@ export default class App extends Component {
           <div className="recRow">
             <div className="recPadding">
               <div className="recTransformer">
-                {/* {selectedRecs.map((value, i) => ( */}
                 <span>
                   <Carousel products={selectedRecs} />
-                  {/* <Recommendations
-                        boolean={this.state.isToggle}
-                        toggle={this.toggleFavorite}
-                        products={value}
-                      /> */}
                 </span>
-                {/* ))} */}
               </div>
             </div>
           </div>
         </div>
 
-        <div>
-          {/* for Recommendations */}
-          {/* <Carousel products={selectedRecs} /> */}
+        <div className="mainRecContainer">
+          <h2>Others Also Bought</h2>
+          <div className="recRow">
+            <div className="recPadding">
+              <div className="recTransformer">
+                <span>
+                  <Carousel products={selectedOtherBought} />
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mainRecContainer">
+          <h2>Recently Viewed Items</h2>
+          <div className="recRow">
+            <div className="recPadding">
+              <div className="recTransformer">
+                <span>
+                  <Carousel products={selectedRecent} />
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* <div className="mainRecContainer">
