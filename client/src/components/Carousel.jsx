@@ -3,6 +3,7 @@ import Recommendations from './Recommendations';
 import style from '../css/Carousel.css';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
+import Indicators from './Indicators';
 
 export default class Carousel extends Component {
   constructor(props) {
@@ -59,7 +60,7 @@ export default class Carousel extends Component {
             className="transformers"
             style={{
               transform: `translate(${this.state.translateValue}px)`,
-              transition: 'transform ease-out 0.45s',
+              transition: 'transform ease-out 0.30s',
             }}
           >
             {this.props.products.map((value, index) => (
@@ -68,6 +69,9 @@ export default class Carousel extends Component {
           </div>
           <LeftArrow currentValue={this.state.currentValue} previous={this.previous} />
           <RightArrow length={length} next={this.next} currentValue={this.state.currentValue} />
+          <ul className="indicator">
+            <li />
+          </ul>
         </div>
       </div>
     );
