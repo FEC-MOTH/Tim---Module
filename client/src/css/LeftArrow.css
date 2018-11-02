@@ -6,4 +6,12 @@
   color: #837979;
   background-color: white;
   text-align: center;
+  transition: background-color 0.5s ease;
+  transition: color 0.5s ease;
+}
+
+.LeftArrow:hover {
+  cursor: pointer;
+  background-color: #2e2b2b;
+  color: white;
 }

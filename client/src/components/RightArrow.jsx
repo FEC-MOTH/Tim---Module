@@ -3,7 +3,7 @@ import style from '../css/RightArrow.css';
 
 const RightArrow = function(props) {
   return (
-    <div className="RightArrow">
+    <div className="RightArrow" onClick={props.next}>
       <i className="fas fa-angle-right fa-2x" aria-hidden="true" />
     </div>
   );

@@ -57,7 +57,7 @@ export default class App extends Component {
     //for 4 Products
     // const selectedOtherBought = productArr.slice(1, 5);
     // const selectedRecent = productArr.slice(6, 10);
-    const selectedRecs = productArr.slice(1, 5);
+    const selectedRecs = productArr.slice(1, 10);
 
     return (
       <div className="wrapper">
@@ -71,19 +71,17 @@ export default class App extends Component {
           <h2>You May Also Like</h2>
           <div className="recRow">
             <div className="recPadding">
-              <div className="recWrapper">
-                <div className="recTransformer">
-                  {/* {selectedRecs.map((value, i) => ( */}
-                  <span>
-                    <Carousel products={selectedRecs} />
-                    {/* <Recommendations
+              <div className="recTransformer">
+                {/* {selectedRecs.map((value, i) => ( */}
+                <span>
+                  <Carousel products={selectedRecs} />
+                  {/* <Recommendations
                         boolean={this.state.isToggle}
                         toggle={this.toggleFavorite}
                         products={value}
                       /> */}
-                  </span>
-                  {/* ))} */}
-                </div>
+                </span>
+                {/* ))} */}
               </div>
             </div>
           </div>

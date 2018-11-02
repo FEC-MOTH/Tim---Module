@@ -1,8 +1,16 @@
 .carousel {
   display: flex;
+  overflow: hidden;
+  min-width: 984px;
 }
 
 .recCarousel {
   display: flex;
-  min-width: 1036px;
+  width: 984px;
+  overflow: hidden;
+}
+
+.transformers {
+  display: flex;
+  min-width: 468px;
 }
