@@ -15,3 +15,7 @@
   background-color: #2e2b2b;
   color: white;
 }
+
+.arrowHidden {
+  visibility: hidden;
+}

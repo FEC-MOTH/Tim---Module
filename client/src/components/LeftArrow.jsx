@@ -2,7 +2,6 @@ import React from 'react';
 import style from '../css/LeftArrow.css';
 
 const LeftArrow = function(props) {
-  console.log(props.currentValue);
   return (
     <div className="LeftArrow" onClick={props.previous}>
       <i

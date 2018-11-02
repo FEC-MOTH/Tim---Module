@@ -11,6 +11,7 @@ export default class Carousel extends Component {
       products: [],
       currentValue: 0,
       translateValue: 0,
+      toHideArrow: 0,
     };
 
     this.next = this.next.bind(this);
@@ -33,14 +34,14 @@ export default class Carousel extends Component {
       });
     }
     this.setState(prevState => ({
-      currentValue: prevState.currentValue + 1,
+      currentValue: (prevState.currentValue + 1) * 3,
       translateValue: prevState.translateValue + -this.productWidth(),
     }));
   }
 
   previous() {
     this.setState(prevState => ({
-      currentValue: this.state.currentValue - 1,
+      currentValue: this.state.currentValue / 3 - 1,
       translateValue: prevState.translateValue - -this.productWidth(),
     }));
   }
@@ -50,9 +51,9 @@ export default class Carousel extends Component {
   }
 
   render() {
+    const length = this.state.products.length;
     console.log(this.state.currentValue);
-    console.log(this.state.translateValue);
-    console.log(this.productWidth());
+    console.log(this.state.products);
     return (
       <div className="carousel">
         <div className="recCarousel">
@@ -68,7 +69,7 @@ export default class Carousel extends Component {
             ))}
           </div>
           <LeftArrow currentValue={this.state.currentValue} previous={this.previous} />
-          <RightArrow next={this.next} />
+          <RightArrow length={length} next={this.next} currentValue={this.state.currentValue} />
         </div>
       </div>
     );
