@@ -11,7 +11,6 @@ export default class Carousel extends Component {
       products: [],
       currentValue: 0,
       translateValue: 0,
-      toHideArrow: 0,
     };
 
     this.next = this.next.bind(this);
@@ -52,8 +51,7 @@ export default class Carousel extends Component {
 
   render() {
     const length = this.state.products.length;
-    console.log(this.state.currentValue);
-    console.log(this.state.products);
+
     return (
       <div className="carousel">
         <div className="recCarousel">

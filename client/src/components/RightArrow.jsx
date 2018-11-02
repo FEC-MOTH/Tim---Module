@@ -2,7 +2,6 @@ import React from 'react';
 import style from '../css/RightArrow.css';
 
 const RightArrow = function(props) {
-  console.log(props.currentValue);
   return (
     <div className="RightArrow" onClick={props.next}>
       <i
