@@ -16,8 +16,10 @@ export default class Carousel extends Component {
 
     this.next = this.next.bind(this);
     this.previous = this.previous.bind(this);
-    this.testClick = this.testClick.bind(this);
-    this.testClick2 = this.testClick2.bind(this);
+    this.home = this.home.bind(this);
+    this.second = this.second.bind(this);
+    this.third = this.third.bind(this);
+    this.fourth = this.fourth.bind(this);
   }
 
   componentDidUpdate(prevProps, prevState) {
@@ -36,44 +38,87 @@ export default class Carousel extends Component {
       });
     }
     this.setState(prevState => ({
-      // currentValue: (prevState.currentValue + 1) * 3,
       activateBar: prevState.activateBar + 1,
-      translateValue: prevState.translateValue + -this.productWidth(),
+      translateValue: prevState.translateValue + -976,
     }));
   }
 
   previous() {
     this.setState(prevState => ({
-      // currentValue: this.state.currentValue / 3 - 1,
       activateBar: prevState.activateBar - 1,
-      translateValue: prevState.translateValue - -this.productWidth(),
+      translateValue: prevState.translateValue - -976,
     }));
   }
 
-  testClick2() {
+  home() {
     this.setState(prevState => ({
-      // currentValue: this.state.currentValue * 0,
       activateBar: prevState.activateBar * 0,
       translateValue: prevState.translateValue * 0,
     }));
   }
 
-  testClick() {
-    this.setState(prevState => ({
-      // currentValue: (this.state.currentValue + 4) * 3,
-      activateBar: prevState.activateBar + 2,
-      translateValue: prevState.translateValue + -(this.productWidth() * 2),
-    }));
+  second() {
+    if (this.state.translateValue === -2928) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar - 2,
+        translateValue: prevState.translateValue - -1952,
+      }));
+    } else if (this.state.translateValue === -1952) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar - 1,
+        translateValue: prevState.translateValue - -976,
+      }));
+    } else if (this.state.translateValue === 0) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 1,
+        translateValue: prevState.translateValue + -976,
+      }));
+    }
   }
 
-  productWidth() {
-    return 976;
+  third() {
+    if (this.state.translateValue === -2928) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar - 1,
+        translateValue: prevState.translateValue - -976,
+      }));
+      //handle for second.
+    } else if (this.state.translateValue === -976) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 1,
+        translateValue: prevState.translateValue + -976,
+      }));
+    } else if (this.state.translateValue === 0) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 2,
+        translateValue: prevState.translateValue + -(976 * 2),
+      }));
+    }
+  }
+
+  fourth() {
+    //from third
+    if (this.state.translateValue === -1952) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 1,
+        translateValue: prevState.translateValue + -976,
+      }));
+    } else if (this.state.translateValue === -976) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 2,
+        translateValue: prevState.translateValue + -(976 * 2),
+      }));
+    } else if (this.state.translateValue === 0) {
+      this.setState(prevState => ({
+        activateBar: prevState.activateBar + 3,
+        translateValue: prevState.translateValue + -(976 * 3),
+      }));
+    }
   }
 
   render() {
-    // console.log('this is currentValue', this.state.currentValue);
-    console.log('this is translateValue', this.state.translateValue);
-    console.log('this is activeBar', this.state.activateBar);
+    console.log(this.state.translateValue);
+    console.log(this.state.activateBar);
     const length = this.state.products.length;
     return (
       <div className="carousel">
@@ -96,14 +141,21 @@ export default class Carousel extends Component {
           <ul className="indicators">
             <li
               className={this.state.activateBar === 0 ? 'active' : 'nonActiveBars'}
-              onClick={this.testClick2}
+              onClick={this.home}
             />
-            <li className={this.state.activateBar === 1 ? 'active' : 'nonActiveBars'} />
+            <li
+              className={this.state.activateBar === 1 ? 'active' : 'nonActiveBars'}
+              onClick={this.second}
+            />
+
             <li
               className={this.state.activateBar === 2 ? 'active' : 'nonActiveBars'}
-              onClick={this.testClick}
+              onClick={this.third}
             />
-            <li className={this.state.activateBar === 3 ? 'active' : 'nonActiveBars'} />
+            <li
+              className={this.state.activateBar === 3 ? 'active' : 'nonActiveBars'}
+              onClick={this.fourth}
+            />
           </ul>
         </div>
       </div>
