@@ -14,7 +14,6 @@ export default class App extends Component {
     super(props);
     this.state = {
       products: [],
-      view: '', //can either change to description or specifications
       isToggle: false,
     };
     this.fetchData = this.fetchData.bind(this);
@@ -59,13 +58,21 @@ export default class App extends Component {
     const selectedOtherBought = productArr.slice(17, 33);
     const selectedRecent = productArr.slice(33);
 
+    // if (props.sectionToRender === 'ProductDetails') {
+    //  return (<div>
+    //    {oneProduct.map((value, i) => (
+    //      <ProductDetails products={value} />
+    //    ))}
+    //  </div>)
+    //}
+
     return (
       <div className="wrapper">
-        <div>
+        {/* <div>
           {oneProduct.map((value, i) => (
             <ProductDetails products={value} />
           ))}
-        </div>
+        </div> */}
 
         <div className="mainRecContainer">
           <h2>You May Also Like</h2>
@@ -80,7 +87,7 @@ export default class App extends Component {
           </div>
         </div>
 
-        <div className="mainRecContainer">
+        {/* <div className="mainRecContainer">
           <h2>Others Also Bought</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -91,9 +98,9 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
 
-        <div className="mainRecContainer">
+        {/* <div className="mainRecContainer">
           <h2>Recently Viewed Items</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -102,53 +109,6 @@ export default class App extends Component {
                   <Carousel products={selectedRecent} />
                 </span>
               </div>
-            </div>
-          </div>
-        </div>
-
-        {/* <div className="mainRecContainer">
-          <h2>Recently Viewed</h2>
-          <div className="recRow">
-            <div className="recPadding">
-              <div className="recWrapper">
-                <div className="recTransformer">
-                  {selectedRecent.map((value, i) => (
-                    <span>
-                      <Recommendations
-                        boolean={this.state.isToggle}
-                        toggle={this.toggleFavorite}
-                        products={value}
-                      />
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
-
-        {/* <div className="recentlyViewed">
-          <div>
-            <h2 style={style.h2}>Recently Viewed</h2>
-            <div className="recentDiv">
-              {selectedRecent.map((value, i) => (
-                <span>
-                  <RecentlyViewed products={value} />
-                </span>
-              ))}
-            </div>
-          </div>
-        </div>
-
-        <div className="othersBought">
-          <div>
-            <h2 style={style.h2}>Others Also Bought</h2>
-            <div className="othersBoughtDiv">
-              {selectedOtherBought.map((value, i) => (
-                <span>
-                  <OthersBought products={value} />
-                </span>
-              ))}
             </div>
           </div>
         </div> */}

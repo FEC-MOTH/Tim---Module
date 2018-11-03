@@ -2,11 +2,10 @@ import React from 'react';
 import style from '../css/RightArrow.css';
 
 const RightArrow = function(props) {
-  console.log(props.currentValue);
   return (
     <div className="RightArrow" onClick={props.next}>
       <i
-        className={props.currentValue >= props.length ? 'arrowHidden' : 'fas fa-angle-right fa-2x'}
+        className={props.currentValue === 3 ? 'arrowHidden' : 'fas fa-angle-right fa-2x'}
         aria-hidden="true"
       />
     </div>

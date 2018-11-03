@@ -14,3 +14,16 @@
   display: flex;
   min-width: 468px;
 }
+
+.indicators {
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+  position: absolute;
+  top: 109%;
+  left: 41%;
+  overflow: hidden;
+  width: 9%;
+  height: 20px;
+  pointer-events: auto;
+}

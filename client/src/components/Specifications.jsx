@@ -9,14 +9,14 @@ const Specifications = function(props) {
     <div className="mainSpec">
       <div className="specParent">
         <div className="specWrapper">
-          <ul>
+          <ul className="first">
             {firstThree.map((spec, i) => (
-              <li>{spec}</li>
+              <li className="item">{spec}</li>
             ))}
           </ul>
-          <ul className="other">
+          <ul className="second">
             {lastThree.map((spec, i) => (
-              <li>{spec}</li>
+              <li className="item">{spec}</li>
             ))}
           </ul>
         </div>
