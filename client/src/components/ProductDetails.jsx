@@ -65,8 +65,6 @@ export default class ProductDetails extends Component {
           <div className={this.state.isToggle ? 'specifications' : 'hide'}>
             <Specifications specs={specArr} />
           </div>
-
-          <div />
         </div>
       </div>
     );

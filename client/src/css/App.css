@@ -101,3 +101,7 @@ h2 {
   position: relative;
   user-select: none;
 }
+
+.boost {
+  max-width: 1260px;
+}

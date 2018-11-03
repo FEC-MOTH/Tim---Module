@@ -72,11 +72,12 @@ export default class App extends Component {
           ))}
         </div> */}
 
-        <div>
+        <div className="boost">
           {oneProduct.map((value, i) => (
             <BoostDetails products={value} />
           ))}
         </div>
+
         {/* <div className="mainRecContainer">
           <h2>You May Also Like</h2>
           <div className="recRow">
