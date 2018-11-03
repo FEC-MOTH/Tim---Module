@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Recommendations from './Recommendations';
+import Products from './Products';
 import style from '../css/Carousel.css';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
@@ -125,7 +125,7 @@ export default class Carousel extends Component {
             }}
           >
             {this.props.products.map((value, index) => (
-              <Recommendations products={value} />
+              <Products products={value} />
             ))}
           </div>
           <div>
