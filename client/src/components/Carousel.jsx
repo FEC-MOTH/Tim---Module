@@ -111,9 +111,8 @@ export default class Carousel extends Component {
   }
 
   render() {
-    console.log(this.state.translateValue);
-    console.log(this.state.activateBar);
     const length = this.state.products.length;
+
     return (
       <div className="carousel">
         <div className="recCarousel">

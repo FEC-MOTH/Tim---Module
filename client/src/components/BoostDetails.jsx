@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import Description from './Description';
 import Specifications from './Specifications';
+import HighLights from './HighLights';
 
 //css
-import style from '../css/ProductDetails.css';
+import style from '../css/BoostDetails.css';
 
 // this is contructor;
 // it will handle login for rendering Description and Specifications;
