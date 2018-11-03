@@ -1,4 +1,4 @@
-.productParent {
+.boostParent {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
@@ -26,7 +26,7 @@ h1 {
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
 }
 
-.toggleList {
+.boostList {
   width: 100%;
   margin-bottom: 40px;
   margin: 0 0 20px;

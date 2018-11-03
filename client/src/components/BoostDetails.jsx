@@ -8,13 +8,37 @@ import style from '../css/BoostDetails.css';
 
 // this is contructor;
 // it will handle login for rendering Description and Specifications;
+//TODO: refactor the click function to take in the eventhandler name
+//set the name if not, change it to null.
+
+const highlights = [
+  [
+    ['runner type', 'Neutral shoes for the ultimate running experience'],
+    [
+      'lightweight comfort',
+      'adidas Primeknit upper wraps the foot in adaptive support and ultralight comfort',
+    ],
+    [
+      'enrgize cushioning',
+      'Boost is our most responsive cushioning ever: The more energy you give, the more you get',
+    ],
+    [
+      'natural movement',
+      'Fitcounter molded heel counter provides a natural fit that allows optimal movement of the Achilles',
+    ],
+    [
+      'reliable traction',
+      'Stretchweb outsole flexes naturally for an energized ride, while Continental™ Rubber gives you superior traction',
+    ],
+  ],
+];
 
 export default class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      highlight: false,
-      description: true,
+      highlight: true,
+      description: false,
       specification: false,
       products: [],
     };
@@ -84,9 +108,6 @@ export default class ProductDetails extends Component {
   }
 
   render() {
-    console.log('this is highlight', this.state.highlight);
-    console.log('this is descrition', this.state.description);
-    console.log('this is specification', this.state.specification);
     //for Specs;
     const specifications = this.props.products.specification;
     const specArr = JSON.parse(specifications);
@@ -96,11 +117,11 @@ export default class ProductDetails extends Component {
     const imagesArr = JSON.parse(images);
 
     return (
-      <div className="productParent">
+      <div className="boostParent">
         <div>
           <h1>Product Details</h1>
           <div>
-            <ul className="toggleList">
+            <ul className="boostList">
               <li
                 className={this.state.highlight ? 'highlightsToggle' : ' boostToggleItems'}
                 onClick={this.highlight}
@@ -134,7 +155,11 @@ export default class ProductDetails extends Component {
             <Specifications specs={specArr} />
           </div>
 
-          <div className={this.state.highlight ? 'highlights' : 'hide'}>{/* <HighLights /> */}</div>
+          <div className={this.state.highlight ? 'highlights' : 'hide'}>
+            {highlights.map(highlight =>
+              highlight.map(value => <HighLights title={value[0]} detail={value[1]} />),
+            )}
+          </div>
           <div />
         </div>
       </div>
