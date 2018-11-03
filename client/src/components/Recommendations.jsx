@@ -3,6 +3,7 @@ import style from '../css/Recommendations.css';
 import SvgStar from '../components/starSvg.jsx';
 import EmptySvgStar from '../components/emptystarSvg.jsx';
 import ReactSVG from 'react-svg';
+import { ratingToStarTranslation } from '../../../helpers/helperFunctions.js';
 
 const Recommendations = function(props) {
   const images = props.products.image;
@@ -15,7 +16,8 @@ const Recommendations = function(props) {
   };
 
   const randomRating = () => Math.floor(Math.random() * 100);
-  const random = () => Math.floor(Math.random() * 100).toString() + '%';
+  const randomId = () => Math.random() * 0.9999;
+  const randomStars = () => Math.random() * (5 - 3) + 3;
 
   return (
     <div className="hockeyCard">
@@ -46,33 +48,9 @@ const Recommendations = function(props) {
               <div className="productPrice">{correctPrice(price)}</div>
             </div>
             <div className="rating">
-              <SvgStar />
-              <SvgStar />
-              <SvgStar />
-              <SvgStar />
-              <svg
-                className="gl-star-rating__star"
-                viewBox="0 0 15 15"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <linearGradient id="11502f28-920e-4706-abbb-914b0eafcdb8">
-                  <stop offset="0%" stopOpacity="1" style={{ stopColor: 'currentcolor' }} />
-                  <stop offset={random()} stopOpacity="1" style={{ stopColor: 'currentcolor' }} />
-                  <stop offset={random()} stopOpacity="0" style={{ stopColor: 'currentcolor' }} />
-                  <stop offset={random()} stopOpacity="0" style={{ stopColor: 'currentcolor' }} />
-                </linearGradient>
-                <path
-                  fill="none"
-                  stroke="currentColor"
-                  strokeMiterlimit="10"
-                  d="M13.277,6.182L9.697,8.782L11.057,12.992L7.487,10.392L3.907,12.992L5.277,8.782L1.697,6.182L6.117,6.182L7.487,1.992L8.857,6.182L13.277,6.182Z"
-                />
-                <path
-                  fill="url(#11502f28-920e-4706-abbb-914b0eafcdb8)"
-                  stroke="0"
-                  d="M13.277,6.182L9.697,8.782L11.057,12.992L7.487,10.392L3.907,12.992L5.277,8.782L1.697,6.182L6.117,6.182L7.487,1.992L8.857,6.182L13.277,6.182Z"
-                />
-              </svg>
+              {ratingToStarTranslation(randomStars()).map((value, index) => (
+                <SvgStar index={randomId()} value={value} />
+              ))}
               <div className="numbersOfRaters">{randomRating()}</div>
             </div>
           </div>
@@ -83,3 +61,33 @@ const Recommendations = function(props) {
 };
 
 export default Recommendations;
+
+{
+  /* <SvgStar />
+<SvgStar />
+<SvgStar />
+<SvgStar />
+<svg
+  className="gl-star-rating__star"
+  viewBox="0 0 15 15"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <linearGradient id="11502f28-920e-4706-abbb-914b0eafcdb8">
+    <stop offset="0%" stopOpacity="1" style={{ stopColor: 'currentcolor' }} />
+    <stop offset={random()} stopOpacity="1" style={{ stopColor: 'currentcolor' }} />
+    <stop offset={random()} stopOpacity="0" style={{ stopColor: 'currentcolor' }} />
+    <stop offset={random()} stopOpacity="0" style={{ stopColor: 'currentcolor' }} />
+  </linearGradient>
+  <path
+    fill="none"
+    stroke="currentColor"
+    strokeMiterlimit="10"
+    d="M13.277,6.182L9.697,8.782L11.057,12.992L7.487,10.392L3.907,12.992L5.277,8.782L1.697,6.182L6.117,6.182L7.487,1.992L8.857,6.182L13.277,6.182Z"
+  />
+  <path
+    fill="url(#11502f28-920e-4706-abbb-914b0eafcdb8)"
+    stroke="0"
+    d="M13.277,6.182L9.697,8.782L11.057,12.992L7.487,10.392L3.907,12.992L5.277,8.782L1.697,6.182L6.117,6.182L7.487,1.992L8.857,6.182L13.277,6.182Z"
+  />
+</svg> */
+}

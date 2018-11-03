@@ -31,12 +31,6 @@ export default class Carousel extends Component {
   }
 
   next() {
-    if (this.state.currentValue === this.state.products.length - 1) {
-      return this.setState({
-        currentValue: 0,
-        translateValue: 0,
-      });
-    }
     this.setState(prevState => ({
       activateBar: prevState.activateBar + 1,
       translateValue: prevState.translateValue + -976,

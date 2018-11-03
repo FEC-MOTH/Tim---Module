@@ -68,11 +68,11 @@ export default class App extends Component {
 
     return (
       <div className="wrapper">
-        {/* <div>
+        <div>
           {oneProduct.map((value, i) => (
             <ProductDetails products={value} />
           ))}
-        </div> */}
+        </div>
 
         <div className="mainRecContainer">
           <h2>You May Also Like</h2>
@@ -87,7 +87,7 @@ export default class App extends Component {
           </div>
         </div>
 
-        {/* <div className="mainRecContainer">
+        <div className="mainRecContainer">
           <h2>Others Also Bought</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -98,9 +98,9 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="mainRecContainer">
+        <div className="mainRecContainer">
           <h2>Recently Viewed Items</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -111,7 +111,7 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }
