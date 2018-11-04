@@ -64,6 +64,7 @@
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
     "jest": "^23.6.0",
+    "json-loader": "^0.5.7",
     "superagent": "^4.0.0-beta.5",
     "supertest": "^3.3.0"
   },

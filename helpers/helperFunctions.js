@@ -30,40 +30,25 @@ const exportObj = {
   ],
   // for snapshot details
   snapshotDetails: [
-    {
-      surface: {
-        title1: 'Surface',
-        title2: 'urban',
-        description: 'Wear these shoes when you run:',
-        road: 'Road',
-        gym: 'Gym',
-        track: 'track',
-      },
-    },
-    {
-      suite: {
-        title1: 'best suited for',
-        title2: 'long run',
-        description:
-          'Go the distance for a weekend long run. These shoes are lightweight yet supportive for the stamina to run further',
-      },
-    },
-    {
-      cushioning: {
-        title1: 'cushioning',
-        title2: 'soft',
-        description:
-          'Lightweight and soft, these shoes offer highly responsive cushioning: the more energy you give, the more you get.',
-      },
-    },
-    {
-      type: {
-        title1: 'runner type',
-        title2: 'neutral',
-        description:
-          'Flexible and versatile, these shoes are built for a natural yet cushioned ride.',
-      },
-    },
+    ['Surface', 'urban', 'Wear these shoes when you run: Road, Gym, Track'],
+    [
+      'best suited for',
+      'long run',
+      'Go the distance for a weekend long run. These shoes are lightweight yet supportive for the stamina to run further.',
+    ],
+    [
+      'cushioning',
+      'soft',
+
+      'Lightweight and soft, these shoes offer highly responsive cushioning: the more energy you give, the more you get.',
+    ],
+
+    [
+      'runner type',
+      'neutral',
+
+      'Flexible and versatile, these shoes are built for a natural yet cushioned ride.',
+    ],
   ],
 };
 

@@ -4,6 +4,8 @@ import ProductDetails from './ProductDetails';
 import Carousel from './Carousel';
 import BoostDetails from './BoostDetails';
 
+// TODO: Change helperFunction to be an actual JSON file instead of putting it into helpers.
+
 // css
 import style from '../css/App.css';
 

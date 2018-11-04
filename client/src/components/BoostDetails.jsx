@@ -10,8 +10,6 @@ import style from '../css/BoostDetails.css';
 
 // this is contructor;
 // it will handle login for rendering Description and Specifications;
-//TODO: refactor the click function to take in the eventhandler name
-//set the name if not, change it to null.
 
 export default class ProductDetails extends Component {
   constructor(props) {
@@ -81,12 +79,8 @@ export default class ProductDetails extends Component {
         </div>
         <div className="snapshot">
           <h1>Product Snapshot</h1>
-          <div className="snapshotWrapper">
-            {exportObj.snapShotImg.map(img => (
-              <div className="snapshotParent">
-                <ProductSnapshot img={img} />
-              </div>
-            ))}
+          <div className="snapshotParent">
+            <ProductSnapshot snapshots={exportObj} />
           </div>
         </div>
       </div>

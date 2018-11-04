@@ -153,12 +153,29 @@ h1 {
 
 /* snapshot */
 .snapshot {
-}
-
-.snapshotWrapper {
-  display: flex;
-  max-width: 1240px;
+  height: 500px;
 }
 
 .snapshotParent {
+  display: flex;
+  width: 1149px;
+}
+
+.deets {
+}
+
+.deetsP {
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  font-weight: 900;
+  margin-top: 0px;
+}
+
+.deetsP2 {
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 14px;
+  width: 262px;
 }
