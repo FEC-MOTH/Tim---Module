@@ -147,4 +147,18 @@ h1 {
 
 .highlights {
   display: flex;
+  height: 325px;
+  margin-bottom: 80px;
+}
+
+/* snapshot */
+.snapshot {
+}
+
+.snapshotWrapper {
+  display: flex;
+  max-width: 1240px;
+}
+
+.snapshotParent {
 }

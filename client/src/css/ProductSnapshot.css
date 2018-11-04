@@ -1,0 +1,12 @@
+.imgWrapper {
+  display: flex;
+  background-color: #ebedee;
+  width: 274.88px;
+  margin-right: 14px;
+  justify-content: center;
+}
+
+.snapshotImg {
+  width: 100px;
+  height: 274.88px;
+}

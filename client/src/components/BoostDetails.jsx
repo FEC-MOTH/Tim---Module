@@ -81,11 +81,13 @@ export default class ProductDetails extends Component {
         </div>
         <div className="snapshot">
           <h1>Product Snapshot</h1>
-          {exportObj.snapShotImg.map(img => (
-            <div className="snapShotParent">
-              <ProductSnapshot img={img} />
-            </div>
-          ))}
+          <div className="snapshotWrapper">
+            {exportObj.snapShotImg.map(img => (
+              <div className="snapshotParent">
+                <ProductSnapshot img={img} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     );

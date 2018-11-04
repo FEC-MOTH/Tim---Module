@@ -3,6 +3,7 @@
   flex-wrap: wrap;
   width: 118%;
   justify-content: space-between;
+  margin-bottom: 50px;
 }
 
 .specWrapper {

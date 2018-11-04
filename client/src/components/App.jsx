@@ -27,8 +27,8 @@ export default class App extends Component {
       .get('shoedidas/product/details')
       .then(data => {
         let products = data.data;
-        let randomized = products.sort(() => 0.5 - Math.random());
-        let selected = randomized.slice(0, 50);
+        // let randomized = products.sort(() => 0.5 - Math.random());
+        let selected = products.slice(0, 1);
         this.setState({
           products: selected,
         });

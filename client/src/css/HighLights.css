@@ -17,15 +17,15 @@ h4 {
 .firstWrapper {
   display: flex;
   align-items: flex-start;
-  position: absolute;
-  left: 86px;
+  position: relative;
+  left: 438px;
 }
 
 .secondWrapper {
   display: flex;
   position: relative;
   top: 179px;
-  right: -25%;
+  left: -26%;
 }
 
 .first {
