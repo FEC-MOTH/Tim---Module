@@ -4,8 +4,7 @@ import style from '../css/HighLights.css';
 const HighLights = function(props) {
   const first = props.highlights[0].slice(0, 3);
   const second = props.highlights[0].slice(3);
-  console.log(second);
-  console.log(first);
+
   return (
     <div className="highlightWrapper">
       <div className="firstWrapper">
