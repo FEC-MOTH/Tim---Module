@@ -33,14 +33,14 @@ export default class Carousel extends Component {
   next() {
     this.setState(prevState => ({
       activateBar: prevState.activateBar + 1,
-      translateValue: prevState.translateValue + -976,
+      translateValue: prevState.translateValue + -1150,
     }));
   }
 
   previous() {
     this.setState(prevState => ({
       activateBar: prevState.activateBar - 1,
-      translateValue: prevState.translateValue - -976,
+      translateValue: prevState.translateValue - -1150,
     }));
   }
 

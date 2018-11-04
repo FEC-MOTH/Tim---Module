@@ -17,6 +17,10 @@ margin-right: auto; */
 .hockeyCard {
 }
 
+.productCard {
+  padding-right: 47px;
+}
+
 .productCard:hover {
   border: 0.02px solid #eed2d2;
   cursor: pointer;
@@ -27,9 +31,9 @@ margin-right: auto; */
 }
 
 .img {
-  width: 228px;
-  margin-left: 14.4px;
+  width: 274.88px;
   margin-bottom: 13px;
+  margin-left: 0px;
 }
 
 .productDetails {
@@ -60,11 +64,12 @@ margin-right: auto; */
 
 .favorite {
   position: relative;
-  bottom: 232px;
-  left: 79%;
+  bottom: 274px;
+  left: 97%;
   width: 4%;
   margin: 0%;
 }
+
 .icon {
   width: 23px;
 }

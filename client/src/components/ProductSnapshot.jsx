@@ -1,6 +1,5 @@
 import React from 'react';
 import style from '../css/ProductSnapshot.css';
-import { exportObj } from '../../../helpers/helperFunctions.js';
 
 const ProductSnapshot = function(props) {
   const imgs = props.snapshots.snapShotImg;

@@ -29,8 +29,8 @@ export default class App extends Component {
       .get('shoedidas/product/details')
       .then(data => {
         let products = data.data;
-        // let randomized = products.sort(() => 0.5 - Math.random());
-        let selected = products.slice(0, 1);
+        let randomized = products.sort(() => 0.5 - Math.random());
+        let selected = randomized.slice(0, 50);
         this.setState({
           products: selected,
         });
@@ -80,7 +80,7 @@ export default class App extends Component {
           ))}
         </div>
 
-        {/* <div className="mainRecContainer">
+        <div className="mainRecContainer">
           <h2>You May Also Like</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -91,9 +91,9 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="mainRecContainer">
+        <div className="mainRecContainer">
           <h2>Others Also Bought</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -104,9 +104,9 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
 
-        {/* <div className="mainRecContainer">
+        <div className="mainRecContainer">
           <h2>Recently Viewed Items</h2>
           <div className="recRow">
             <div className="recPadding">
@@ -117,7 +117,7 @@ export default class App extends Component {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
       </div>
     );
   }

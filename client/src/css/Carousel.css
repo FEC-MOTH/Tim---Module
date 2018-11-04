@@ -1,12 +1,12 @@
 .carousel {
   display: flex;
   overflow: hidden;
-  min-width: 984px;
+  min-width: 1140px;
 }
 
 .recCarousel {
   display: flex;
-  width: 984px;
+  width: 1163px;
   overflow: hidden;
 }
 

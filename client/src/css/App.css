@@ -69,6 +69,7 @@ h2 {
 .mainRecContainer {
   margin-top: 140px;
   padding-bottom: 86px;
+  width: 1147.5px;
 }
 
 .recRow {
@@ -96,7 +97,6 @@ h2 {
 }
 
 .recTransformer {
-  display: flex;
   width: 100%;
   position: relative;
   user-select: none;

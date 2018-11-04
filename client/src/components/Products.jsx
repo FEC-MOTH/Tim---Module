@@ -3,7 +3,7 @@ import style from '../css/Products.css';
 import SvgStar from '../components/starSvg.jsx';
 import EmptySvgStar from '../components/emptystarSvg.jsx';
 import ReactSVG from 'react-svg';
-import { ratingToStarTranslation } from '../../../helpers/helperFunctions.js';
+import { ratingToStarTranslation } from '../../../helpers/helperFuncs.js';
 
 const Products = function(props) {
   const images = props.products.image;
