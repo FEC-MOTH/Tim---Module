@@ -4,7 +4,47 @@ h4 {
   font-style: normal;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  font-size: 30px;
+  font-size: 20px;
   text-transform: uppercase;
   margin-bottom: -2%;
+}
+
+.highlightWrapper {
+  margin-right: 20px;
+  display: flex;
+}
+
+.firstWrapper {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  left: 86px;
+}
+
+.secondWrapper {
+  display: flex;
+  position: relative;
+  top: 179px;
+  right: -25%;
+}
+
+.first {
+  list-style-position: outside;
+  width: 441px;
+  margin-right: -52px;
+}
+
+.bodyy {
+  margin-top: 23px;
+}
+
+.second {
+  margin-right: 95px;
+  width: 321px;
+  list-style-position: outside;
+}
+
+.secondBody {
+  width: 90%;
+  margin-top: 23px;
 }

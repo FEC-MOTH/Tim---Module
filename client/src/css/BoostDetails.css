@@ -52,6 +52,8 @@ h1 {
   color: #98989a;
   border: 1px solid #d9dcdd;
   margin-left: -1px;
+  padding-left: 138px;
+  padding-right: 138px;
 }
 
 .wrapper {
@@ -79,6 +81,9 @@ h1 {
   box-shadow: inset 0 -2px 0 #000;
   z-index: 1;
   position: relative;
+  padding-left: 138px;
+  padding-right: 138px;
+  cursor: pointer;
 }
 
 .descriptionToggle {
@@ -99,6 +104,9 @@ h1 {
   box-shadow: inset 0 -2px 0 #000;
   z-index: 1;
   position: relative;
+  padding-left: 138px;
+  padding-right: 138px;
+  cursor: pointer;
 }
 
 .specificationToggle {
@@ -119,6 +127,9 @@ h1 {
   box-shadow: inset 0 -2px 0 #000;
   z-index: 1;
   position: relative;
+  padding-left: 138px;
+  padding-right: 138px;
+  cursor: pointer;
 }
 
 .productDisplay {

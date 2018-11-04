@@ -10,10 +10,10 @@
   width: 1123px;
 }
 
-.first {
-  margin-right: 28px;
-  width: 100%;
+.ul1 {
   list-style-position: outside;
+  width: 441px;
+  margin-right: 146px;
 }
 
 .item {
@@ -22,8 +22,8 @@
   line-height: 22px;
 }
 
-.second {
-  margin-right: 28px;
-  width: 90%;
+.ul2 {
+  margin-right: 16px;
+  width: 37%;
   list-style-position: outside;
 }
