@@ -3,6 +3,7 @@ import axios from 'axios';
 import ProductDetails from './ProductDetails';
 import Carousel from './Carousel';
 import BoostDetails from './BoostDetails';
+import { exportObj } from '../../../helpers/helperFunctions.js';
 
 // TODO: Change helperFunction to be an actual JSON file instead of putting it into helpers.
 
@@ -46,17 +47,31 @@ export default class App extends Component {
   }
 
   render() {
-    //One Product for details
-    //6 for recommendation, othersbought & recentlyviewed
     const productArr = this.state.products;
+    const boostTemp = [];
+    const otherProducts = [];
 
-    //for Description & Specification
-    const oneProduct = productArr.slice(0, 1);
+    productArr.forEach(boost => {
+      exportObj.ultraBoosts.forEach(check => {
+        if (boost.item_name === check) {
+          boostTemp.push(boost);
+          productArr.splice(boost);
+        } else if (boost.item_name !== check) {
+          if (!otherProducts.includes(boost)) {
+            otherProducts.push(boost);
+          }
+        }
+      });
+    });
 
-    //for 4 Products
-    const selectedRecs = productArr.slice(1, 17);
-    const selectedOtherBought = productArr.slice(17, 33);
-    const selectedRecent = productArr.slice(33);
+    //One Product for details
+    // const oneProduct = productArr.slice(0, 1);
+    const ultraBoost = boostTemp.slice(0, 1);
+
+    // to use for Carousel
+    const selectedRecs = otherProducts.slice(0, 16);
+    const selectedOtherBought = otherProducts.slice(16, 33);
+    const selectedRecent = otherProducts.slice(33);
 
     // if (props.sectionToRender === 'ProductDetails') {
     //  return (<div>
@@ -75,14 +90,13 @@ export default class App extends Component {
         </div> */}
 
         <div className="boost">
-          {oneProduct.map((value, i) => (
+          {ultraBoost.map((value, i) => (
             <BoostDetails products={value} />
           ))}
         </div>
 
         <div className="pictureFeed">
-          <script src="https://apps.elfsight.com/p/platform.js" defer />
-          <div class="elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9" />
+          <div className="elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9" />
         </div>
 
         <div className="mainRecContainer">

@@ -17,7 +17,6 @@ export default class ProductDetails extends Component {
     super(props);
     this.state = {
       viewChange: 'Description',
-      products: [],
     };
 
     this.views = this.views.bind(this);

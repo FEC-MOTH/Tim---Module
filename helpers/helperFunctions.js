@@ -50,6 +50,20 @@ const exportObj = {
       'Flexible and versatile, these shoes are built for a natural yet cushioned ride.',
     ],
   ],
+  ultraBoosts: [
+    'ULTRABOOST Shoes',
+    'UltraBOOST Uncaged Parley Shoes',
+    'ULTRABOOST Uncaged Shoes',
+    'ULTRABOOST X Parley Shoes',
+    'UltraBOOST X Limited-Edition Shoes',
+    'UltraBOOST X Clima Shoes',
+    'UltraBOOST X Shoes',
+    'UltraBOOST Uncaged Shoes',
+    'UltraBOOST X Shoes',
+    'UltraBOOST Uncaged Shoes',
+    'UltraBOOST X Clima Shoes',
+    'UltraBOOST X Clima Shoes',
+  ],
 };
 
 // to generate stars
