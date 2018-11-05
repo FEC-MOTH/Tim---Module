@@ -4,6 +4,7 @@ Carousel and Product Details
 
 Please run the followings information:
 
+npm install -- to install all dependencies
 npm start - for webpack
 npm run build - to start server
 
