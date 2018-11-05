@@ -15,7 +15,8 @@
   "scripts": {
     "build": "nodemon server/server.js",
     "start": "webpack -w",
-    "test": "jest"
+    "test": "jest",
+    "seed": "nodemone database/seed/seed.js"
   },
   "dependencies": {
     "@babel/core": "^7.1.2",

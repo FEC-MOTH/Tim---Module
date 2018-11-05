@@ -113,20 +113,4 @@ Example Schema;
      { id: 'dw1a79d952', fileName: 'BA8842_43_detail.jpg' }
     ]
   }
-
-
-Previously Constructed data
-const fakeProducts = [
-  {
-    item_name: fake('{{name.jobDescriptor}}'),
-    category_name: fake('{{commerce.productName}}'),
-    product_type: fake('{{address.state}}'),
-    description: fake('{{lorem.paragraph}}'),
-    specification: fake('{{company.companySuffix}}'),
-    catchphrase: fake('{{company.catchPhrase}}'),
-    product_details: fake('{{commerce.productAdjective}}'),
-    price: fake('{{random.number}}'),
-    image: fake('{{image.sports}}'),
-  },
-];
 */
