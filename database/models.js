@@ -25,12 +25,12 @@ const Products = dbConnection.define(
     item_name: { type: Sequelize.STRING },
     category_name: { type: Sequelize.STRING },
     product_type: { type: Sequelize.STRING },
-    description: { type: Sequelize.STRING },
-    specification: { type: Sequelize.STRING },
+    description: { type: Sequelize.STRING(1000) },
+    specification: { type: Sequelize.STRING(1000) },
     catchphrase: { type: Sequelize.STRING },
     product_details: { type: Sequelize.STRING },
     price: { type: Sequelize.INTEGER },
-    image: { type: Sequelize.STRING },
+    image: { type: Sequelize.STRING(1000) },
   },
 
   {

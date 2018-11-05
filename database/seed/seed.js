@@ -85,11 +85,11 @@ const fakeDataGenerator = (arr, n) => {
   });
 };
 
-// fakeDataGenerator(runningShoes, 15); **
-// fakeDataGenerator(runningApperal, 15); **
-// fakeDataGenerator(basketballShoes, 15); *
-// fakeDataGenerator(footballCleats, 15); *
-// fakeDataGenerator(accessories, 15);
+fakeDataGenerator(runningShoes, 30);
+fakeDataGenerator(runningApperal, 15);
+fakeDataGenerator(basketballShoes, 15);
+fakeDataGenerator(footballCleats, 15);
+fakeDataGenerator(accessories, 15);
 
 /*
 Example Schema;
