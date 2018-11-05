@@ -3,6 +3,7 @@ import Description from './Description';
 import Specifications from './Specifications';
 import HighLights from './HighLights';
 import ProductSnapshot from './ProductSnapshot';
+import PicturesShare from './PicturesShare';
 import { exportObj } from '../../../helpers/helperFunctions';
 
 //css
@@ -82,6 +83,9 @@ export default class ProductDetails extends Component {
           <div className="snapshotParent">
             <ProductSnapshot snapshots={exportObj} />
           </div>
+        </div>
+        <div className="picturesShare">
+          <PicturesShare />
         </div>
       </div>
     );

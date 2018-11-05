@@ -12,17 +12,17 @@ export default class ProductDetails extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isToggle: false,
+      isToggle: 'Description',
       products: [],
       // displayComp: true,
     };
     this.toggleActive = this.toggleActive.bind(this);
   }
 
-  toggleActive() {
-    const current = this.state.isToggle;
+  toggleActive(e) {
+    const current = e.target.textContent;
     this.setState({
-      isToggle: !current,
+      isToggle: current,
     });
   }
 
@@ -43,26 +43,26 @@ export default class ProductDetails extends Component {
             <ul className="toggleList">
               {/* Button renders another Div to show either description */}
               <li
-                className={this.state.isToggle ? 'toggleItems' : 'isToggle'}
+                className={this.state.isToggle === 'Description' ? 'isToggle' : ' toggleItems'}
                 onClick={this.toggleActive}
               >
                 Description
               </li>
               {/* Button to render another Div to show Specifications */}
               <li
-                className={this.state.isToggle ? 'isToggle' : ' toggleItems'}
+                className={this.state.isToggle === 'Specifications' ? 'isToggle' : ' toggleItems'}
                 onClick={this.toggleActive}
               >
-                Specification
+                Specifications
               </li>
             </ul>
           </div>
 
-          <div className={this.state.isToggle ? 'hide' : 'productDisplay'}>
+          <div className={this.state.isToggle === 'Description' ? 'productDisplay' : 'hide'}>
             <Description products={this.props.products} />
           </div>
 
-          <div className={this.state.isToggle ? 'specifications' : 'hide'}>
+          <div className={this.state.isToggle === 'Specifications' ? 'specifications' : 'hide'}>
             <Specifications specs={specArr} />
           </div>
         </div>

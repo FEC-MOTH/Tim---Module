@@ -18,11 +18,12 @@ margin-right: auto; */
 }
 
 .productCard {
-  padding-right: 47px;
+  width: 274.87px;
+  margin-left: 10px;
 }
 
 .productCard:hover {
-  border: 0.02px solid #eed2d2;
+  border: 0.01px solid #eed2d2;
   cursor: pointer;
 }
 

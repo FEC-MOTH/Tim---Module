@@ -80,6 +80,11 @@ export default class App extends Component {
           ))}
         </div>
 
+        <div className="pictureFeed">
+          <script src="https://apps.elfsight.com/p/platform.js" defer />
+          <div class="elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9" />
+        </div>
+
         <div className="mainRecContainer">
           <h2>You May Also Like</h2>
           <div className="recRow">

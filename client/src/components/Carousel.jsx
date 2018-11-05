@@ -33,14 +33,14 @@ export default class Carousel extends Component {
   next() {
     this.setState(prevState => ({
       activateBar: prevState.activateBar + 1,
-      translateValue: prevState.translateValue + -1150,
+      translateValue: prevState.translateValue + -1140,
     }));
   }
 
   previous() {
     this.setState(prevState => ({
       activateBar: prevState.activateBar - 1,
-      translateValue: prevState.translateValue - -1150,
+      translateValue: prevState.translateValue - -1140,
     }));
   }
 
@@ -52,60 +52,60 @@ export default class Carousel extends Component {
   }
 
   second() {
-    if (this.state.translateValue === -3450) {
+    if (this.state.translateValue === -3420) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar - 2,
-        translateValue: prevState.translateValue - -2300,
+        translateValue: prevState.translateValue - -2280,
       }));
-    } else if (this.state.translateValue === -2300) {
+    } else if (this.state.translateValue === -2280) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar - 1,
-        translateValue: prevState.translateValue - -1150,
+        translateValue: prevState.translateValue - -1140,
       }));
     } else if (this.state.translateValue === 0) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 1,
-        translateValue: prevState.translateValue + -1150,
+        translateValue: prevState.translateValue + -1140,
       }));
     }
   }
 
   third() {
-    if (this.state.translateValue === -3450) {
+    if (this.state.translateValue === -3420) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar - 1,
-        translateValue: prevState.translateValue - -1150,
+        translateValue: prevState.translateValue - -1140,
       }));
       //handle for second.
-    } else if (this.state.translateValue === -1150) {
+    } else if (this.state.translateValue === -1140) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 1,
-        translateValue: prevState.translateValue + -1150,
+        translateValue: prevState.translateValue + -1140,
       }));
     } else if (this.state.translateValue === 0) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 2,
-        translateValue: prevState.translateValue + -(1150 * 2),
+        translateValue: prevState.translateValue + -(1140 * 2),
       }));
     }
   }
 
   fourth() {
     //from third
-    if (this.state.translateValue === -2300) {
+    if (this.state.translateValue === -2280) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 1,
-        translateValue: prevState.translateValue + -1150,
+        translateValue: prevState.translateValue + -1140,
       }));
-    } else if (this.state.translateValue === -1150) {
+    } else if (this.state.translateValue === -1140) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 2,
-        translateValue: prevState.translateValue + -(1150 * 2),
+        translateValue: prevState.translateValue + -(1140 * 2),
       }));
     } else if (this.state.translateValue === 0) {
       this.setState(prevState => ({
         activateBar: prevState.activateBar + 3,
-        translateValue: prevState.translateValue + -(1150 * 3),
+        translateValue: prevState.translateValue + -(1140 * 3),
       }));
     }
   }
