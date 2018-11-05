@@ -12,6 +12,7 @@ export default class Carousel extends Component {
       products: [],
       translateValue: 0,
       activateBar: 0,
+      favorite: '',
     };
 
     this.next = this.next.bind(this);
@@ -110,9 +111,14 @@ export default class Carousel extends Component {
     }
   }
 
+  favClick(e) {
+    this.setState({
+      favorite: e.target.id,
+    });
+  }
   render() {
     const length = this.state.products.length;
-
+    console.log(this.state.favorite);
     return (
       <div className="carousel">
         <div className="recCarousel">
@@ -124,7 +130,12 @@ export default class Carousel extends Component {
             }}
           >
             {this.props.products.map((value, index) => (
-              <Products products={value} />
+              <Products
+                products={value}
+                id={Math.random()}
+                favClick={this.favClick.bind(this)}
+                fav={this.state.favorite}
+              />
             ))}
           </div>
           <div>

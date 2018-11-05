@@ -3,6 +3,7 @@ import style from '../css/Products.css';
 import SvgStar from '../components/starSvg.jsx';
 import EmptySvgStar from '../components/emptystarSvg.jsx';
 import ReactSVG from 'react-svg';
+import Favorite from './Favorite';
 import { ratingToStarTranslation } from '../../../helpers/helperFuncs.js';
 
 const Products = function(props) {
@@ -32,15 +33,16 @@ const Products = function(props) {
             />
             <div className="favorite">
               <div className="toggleWishList">
-                <img
-                  className="icon"
+                {/* <img
+                  id={props.id}
+                  style={{ width: 23 }}
                   src={
-                    props.boolean
+                    props.id === props.state
                       ? 'https://png.icons8.com/metro/1600/hearts.png'
                       : 'https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/heart-outline-512.png'
                   }
-                  onClick={props.toggle}
-                />
+                  onClick={props.favClick} */}
+                <Favorite id={props.id} favClick={props.favClick} fav={props.fav} />
               </div>
             </div>
             <div className="productDetails">

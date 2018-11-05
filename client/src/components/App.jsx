@@ -15,10 +15,8 @@ export default class App extends Component {
     super(props);
     this.state = {
       products: [],
-      isToggle: false,
     };
     this.fetchData = this.fetchData.bind(this);
-    this.toggleFavorite = this.toggleFavorite.bind(this);
   }
 
   componentDidMount() {
@@ -29,8 +27,8 @@ export default class App extends Component {
     axios
       .get('shoedidas/product/details')
       .then(data => {
-        let products = data.data;
-        let randomized = products.sort(() => 0.5 - Math.random());
+        let product = data.data;
+        let randomized = product.sort(() => 0.5 - Math.random());
         let selected = randomized.slice(0, 50);
         this.setState({
           products: selected,
@@ -39,29 +37,20 @@ export default class App extends Component {
       .catch(err => console.error(err));
   }
 
-  toggleFavorite() {
-    let toggle = this.state.isToggle;
-    this.setState({
-      isToggle: !toggle,
-    });
-  }
-
   render() {
     const productArr = this.state.products;
     const boostTemp = [];
     const otherProducts = [];
+    console.log('productarr', productArr);
+    console.log(boostTemp);
+    console.log(otherProducts);
 
     productArr.forEach(boost => {
-      exportObj.ultraBoosts.forEach(check => {
-        if (boost.item_name === check) {
-          boostTemp.push(boost);
-          productArr.splice(boost);
-        } else if (boost.item_name !== check) {
-          if (!otherProducts.includes(boost)) {
-            otherProducts.push(boost);
-          }
-        }
-      });
+      if (boost.item_name.toLowerCase().includes('ultraboost')) {
+        boostTemp.push(boost);
+      } else {
+        otherProducts.push(boost);
+      }
     });
 
     //One Product for details
@@ -72,14 +61,6 @@ export default class App extends Component {
     const selectedRecs = otherProducts.slice(0, 16);
     const selectedOtherBought = otherProducts.slice(16, 33);
     const selectedRecent = otherProducts.slice(33);
-
-    // if (props.sectionToRender === 'ProductDetails') {
-    //  return (<div>
-    //    {oneProduct.map((value, i) => (
-    //      <ProductDetails products={value} />
-    //    ))}
-    //  </div>)
-    //}
 
     return (
       <div className="wrapper">

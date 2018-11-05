@@ -10,7 +10,7 @@ const HighLights = function(props) {
       <div className="firstWrapper">
         {first.map(values => (
           <div className="first">
-            <h4>{values[0]}</h4>
+            <h4 className="highlightTitle">{values[0]}</h4>
             <p className="bodyy">{values[1]}</p>
           </div>
         ))}
@@ -18,7 +18,7 @@ const HighLights = function(props) {
       <div className="secondWrapper">
         {second.map(value => (
           <div className="second">
-            <h4>{value[0]}</h4>
+            <h4 className="highlightTitle">{value[0]}</h4>
             <p className="secondBody">{value[1]}</p>
           </div>
         ))}
