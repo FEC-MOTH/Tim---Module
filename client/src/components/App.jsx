@@ -5,8 +5,6 @@ import Carousel from './Carousel';
 import BoostDetails from './BoostDetails';
 import { exportObj } from '../../../helpers/helperFunctions.js';
 
-// TODO: Change helperFunction to be an actual JSON file instead of putting it into helpers.
-
 // css
 import style from '../css/App.css';
 
@@ -17,6 +15,7 @@ export default class App extends Component {
       products: [],
     };
     this.fetchData = this.fetchData.bind(this);
+    axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
   }
 
   componentDidMount() {
@@ -41,9 +40,6 @@ export default class App extends Component {
     const productArr = this.state.products;
     const boostTemp = [];
     const otherProducts = [];
-    console.log('productarr', productArr);
-    console.log(boostTemp);
-    console.log(otherProducts);
 
     productArr.forEach(boost => {
       if (boost.item_name.toLowerCase().includes('ultraboost')) {

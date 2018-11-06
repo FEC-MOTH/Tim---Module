@@ -3,7 +3,7 @@ const Sequelize = require('sequelize');
 const { env } = require('../env/.env');
 
 const sequelize = new Sequelize(env.database, env.dbHost, env.dbPassword, {
-  host: 'localhost',
+  host: env.HOSTNAME,
   dialect: 'mysql',
 
   pool: {

@@ -33,15 +33,6 @@ const Products = function(props) {
             />
             <div className="favorite">
               <div className="toggleWishList">
-                {/* <img
-                  id={props.id}
-                  style={{ width: 23 }}
-                  src={
-                    props.id === props.state
-                      ? 'https://png.icons8.com/metro/1600/hearts.png'
-                      : 'https://cdn3.iconfinder.com/data/icons/pyconic-icons-1-2/512/heart-outline-512.png'
-                  }
-                  onClick={props.favClick} */}
                 <Favorite id={props.id} favClick={props.favClick} fav={props.fav} />
               </div>
             </div>

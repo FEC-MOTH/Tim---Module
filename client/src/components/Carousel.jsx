@@ -118,7 +118,7 @@ export default class Carousel extends Component {
   }
   render() {
     const length = this.state.products.length;
-    console.log(this.state.favorite);
+
     return (
       <div className="carousel">
         <div className="recCarousel">

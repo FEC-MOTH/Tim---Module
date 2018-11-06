@@ -9,9 +9,6 @@ import { exportObj } from '../../../helpers/helperFunctions';
 //css
 import style from '../css/BoostDetails.css';
 
-// this is contructor;
-// it will handle login for rendering Description and Specifications;
-
 export default class ProductDetails extends Component {
   constructor(props) {
     super(props);

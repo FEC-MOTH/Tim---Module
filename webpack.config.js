@@ -1,4 +1,6 @@
 const path = require('path');
+const webpack = require('webpack');
+const { env } = require('./env/.env');
 
 module.exports = {
   mode: 'development',
@@ -35,4 +37,10 @@ module.exports = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
+  plugins: [
+    new webpack.DefinePlugin({
+      'process.env.HOSTNAME': JSON.stringify(env.HOSTNAME),
+      'process.env.PORT': JSON.stringify(env.PORT),
+    }),
+  ],
 };
