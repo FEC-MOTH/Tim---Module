@@ -19,7 +19,7 @@ const dbConnection = require('./index.js');
 // product details
 
 const Products = dbConnection.define(
-  'products',
+  'productDetails',
   {
     id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
     item_name: { type: Sequelize.STRING },

@@ -82,7 +82,7 @@ export default class ProductDetails extends Component {
             <Specifications specs={specArr} />
           </div>
 
-          <div className={this.state.viewChange === 'Highlights' ? 'highlights' : style.hide}>
+          <div className={this.state.viewChange === 'Highlights' ? style.highlights : style.hide}>
             <HighLights highlights={exportObj.highlights} />
           </div>
         </div>
