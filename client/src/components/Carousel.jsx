@@ -3,7 +3,6 @@ import Products from './Products';
 import style from '../css/Carousel.css';
 import LeftArrow from './LeftArrow';
 import RightArrow from './RightArrow';
-import indicatorStyle from '../css/Indicators.css';
 
 export default class Carousel extends Component {
   constructor(props) {
@@ -120,10 +119,10 @@ export default class Carousel extends Component {
     const length = this.state.products.length;
 
     return (
-      <div className="carousel">
-        <div className="recCarousel">
+      <div className={style.carousel}>
+        <div className={style.recCarousel}>
           <div
-            className="transformers"
+            className={style.transformers}
             style={{
               transform: `translate(${this.state.translateValue}px)`,
               transition: 'transform ease-out 0.45s',
@@ -142,22 +141,22 @@ export default class Carousel extends Component {
             <LeftArrow currentValue={this.state.activateBar} previous={this.previous} />
             <RightArrow length={length} next={this.next} currentValue={this.state.activateBar} />
           </div>
-          <ul className="indicators">
+          <ul className={style.indicators}>
             <li
-              className={this.state.activateBar === 0 ? 'active' : 'nonActiveBars'}
+              className={this.state.activateBar === 0 ? style.active : style.nonActiveBars}
               onClick={this.home}
             />
             <li
-              className={this.state.activateBar === 1 ? 'active' : 'nonActiveBars'}
+              className={this.state.activateBar === 1 ? style.active : style.nonActiveBars}
               onClick={this.second}
             />
 
             <li
-              className={this.state.activateBar === 2 ? 'active' : 'nonActiveBars'}
+              className={this.state.activateBar === 2 ? style.active : style.nonActiveBars}
               onClick={this.third}
             />
             <li
-              className={this.state.activateBar === 3 ? 'active' : 'nonActiveBars'}
+              className={this.state.activateBar === 3 ? style.active : style.nonActiveBars}
               onClick={this.fourth}
             />
           </ul>

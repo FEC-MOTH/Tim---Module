@@ -6,17 +6,17 @@ const Specifications = function(props) {
   const lastThree = props.specs.slice(3);
 
   return (
-    <div className="mainSpec">
-      <div className="specParent">
-        <div className="specWrapper">
-          <ul className="ul1">
+    <div className={style.mainSpec}>
+      <div className={style.specParent}>
+        <div className={style.specWrapper}>
+          <ul className={style.ul1}>
             {firstThree.map((spec, i) => (
-              <li className="item">{spec}</li>
+              <li className={style.item}>{spec}</li>
             ))}
           </ul>
-          <ul className="ul2">
+          <ul className={style.ul2}>
             {lastThree.map((spec, i) => (
-              <li className="item">{spec}</li>
+              <li className={style.item}>{spec}</li>
             ))}
           </ul>
         </div>

@@ -6,20 +6,20 @@ const HighLights = function(props) {
   const second = props.highlights[0].slice(3);
 
   return (
-    <div className="highlightWrapper">
-      <div className="firstWrapper">
+    <div className={style.highlightWrapper}>
+      <div className={style.firstWrapper}>
         {first.map(values => (
-          <div className="first">
-            <h4 className="highlightTitle">{values[0]}</h4>
-            <p className="bodyy">{values[1]}</p>
+          <div className={style.first}>
+            <h4 className={style.highlightTitle}>{values[0]}</h4>
+            <p className={style.bodyy}>{values[1]}</p>
           </div>
         ))}
       </div>
-      <div className="secondWrapper">
+      <div className={style.secondWrapper}>
         {second.map(value => (
-          <div className="second">
-            <h4 className="highlightTitle">{value[0]}</h4>
-            <p className="secondBody">{value[1]}</p>
+          <div className={style.second}>
+            <h4 className={style.highlightTitle}>{value[0]}</h4>
+            <p className={style.secondBody}>{value[1]}</p>
           </div>
         ))}
       </div>

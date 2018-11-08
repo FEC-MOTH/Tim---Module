@@ -3,7 +3,7 @@ import style from '../css/starSvg.css';
 
 const SvgStar = function(props) {
   return (
-    <svg className="gl-star-rating__star" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
+    <svg className={style.star} viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg">
       <linearGradient id={props.index}>
         <stop offset={props.value} stopOpacity="1" style={{ stopColor: 'currentcolor' }} />
         <stop offset={props.value} stopOpacity="1" style={{ stopColor: 'currentcolor' }} />

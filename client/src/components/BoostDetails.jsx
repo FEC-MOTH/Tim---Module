@@ -32,13 +32,15 @@ export default class ProductDetails extends Component {
     const specArr = JSON.parse(specifications);
 
     return (
-      <div className="boostParent">
+      <div className={style.boostParent}>
         <div>
           <h1>Product Details</h1>
           <div>
-            <ul className="boostList">
+            <ul className={style.boostList}>
               <li
-                className={this.state.viewChange === 'Highlights' ? 'hToggle' : ' boostToggle'}
+                className={
+                  this.state.viewChange === 'Highlights' ? style.hToggle : style.boostToggle
+                }
                 onClick={this.views}
               >
                 Highlights
@@ -46,14 +48,18 @@ export default class ProductDetails extends Component {
 
               {/* Button renders another Div to show either description */}
               <li
-                className={this.state.viewChange === 'Description' ? 'dToggle' : 'boostToggle'}
+                className={
+                  this.state.viewChange === 'Description' ? style.dToggle : style.boostToggle
+                }
                 onClick={this.views}
               >
                 Description
               </li>
               {/* Button to render another Div to show Specifications */}
               <li
-                className={this.state.viewChange === 'Specification' ? 'sToggle' : ' boostToggle'}
+                className={
+                  this.state.viewChange === 'Specification' ? style.sToggle : style.boostToggle
+                }
                 onClick={this.views}
               >
                 Specification
@@ -62,25 +68,31 @@ export default class ProductDetails extends Component {
             </ul>
           </div>
 
-          <div className={this.state.viewChange === 'Description' ? 'productDisplay' : 'hide'}>
+          <div
+            className={this.state.viewChange === 'Description' ? style.productDisplay : style.hide}
+          >
             <Description products={this.props.products} />
           </div>
 
-          <div className={this.state.viewChange === 'Specification' ? 'specifications' : 'hide'}>
+          <div
+            className={
+              this.state.viewChange === 'Specification' ? style.specifications : style.hide
+            }
+          >
             <Specifications specs={specArr} />
           </div>
 
-          <div className={this.state.viewChange === 'Highlights' ? 'highlights' : 'hide'}>
+          <div className={this.state.viewChange === 'Highlights' ? 'highlights' : style.hide}>
             <HighLights highlights={exportObj.highlights} />
           </div>
         </div>
-        <div className="snapshot">
+        <div className={style.snapshot}>
           <h1>Product Snapshot</h1>
-          <div className="snapshotParent">
+          <div className={style.snapshotParent}>
             <ProductSnapshot snapshots={exportObj} />
           </div>
         </div>
-        <div className="picturesShare">
+        <div className={style.picturesShare}>
           <PicturesShare />
         </div>
       </div>

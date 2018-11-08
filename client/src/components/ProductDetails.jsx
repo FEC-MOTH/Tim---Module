@@ -36,21 +36,25 @@ export default class ProductDetails extends Component {
     const imagesArr = JSON.parse(images);
 
     return (
-      <div className="productParent">
+      <div className={style.productParent}>
         <div>
           <h1>Product Details</h1>
           <div>
-            <ul className="toggleList">
+            <ul className={style.toggleList}>
               {/* Button renders another Div to show either description */}
               <li
-                className={this.state.isToggle === 'Description' ? 'isToggle' : ' toggleItems'}
+                className={
+                  this.state.isToggle === 'Description' ? style.isToggle : style.toggleItem
+                }
                 onClick={this.toggleActive}
               >
                 Description
               </li>
               {/* Button to render another Div to show Specifications */}
               <li
-                className={this.state.isToggle === 'Specifications' ? 'isToggle' : ' toggleItems'}
+                className={
+                  this.state.isToggle === 'Specifications' ? style.isToggle : style.toggleItem
+                }
                 onClick={this.toggleActive}
               >
                 Specifications
@@ -58,11 +62,15 @@ export default class ProductDetails extends Component {
             </ul>
           </div>
 
-          <div className={this.state.isToggle === 'Description' ? 'productDisplay' : 'hide'}>
+          <div
+            className={this.state.isToggle === 'Description' ? style.productDisplay : style.hide}
+          >
             <Description products={this.props.products} />
           </div>
 
-          <div className={this.state.isToggle === 'Specifications' ? 'specifications' : 'hide'}>
+          <div
+            className={this.state.isToggle === 'Specifications' ? style.specifications : style.hide}
+          >
             <Specifications specs={specArr} />
           </div>
         </div>

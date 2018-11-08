@@ -13,16 +13,22 @@ export default class App extends Component {
     super(props);
     this.state = {
       products: [],
-      toRender: [],
+      toRender: '',
     };
     this.fetchData = this.fetchData.bind(this);
     axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
-    console.log(axios.defaults.baseURL);
   }
 
   componentDidMount() {
     this.fetchData();
+    // this.toRender();
   }
+
+  // toRender() {
+  //   this.setState({
+  //     toRender: this.props.view,
+  //   });
+  // }
 
   fetchData() {
     axios
@@ -60,29 +66,30 @@ export default class App extends Component {
     const selectedOtherBought = otherProducts.slice(16, 33);
     const selectedRecent = otherProducts.slice(33);
 
-    return (
-      <div className="wrapper">
-        {/* <div>
-          {oneProduct.map((value, i) => (
-            <ProductDetails products={value} />
-          ))}
-        </div> */}
+    //set var for render
+    let toRender;
 
-        <div className="boost">
-          {ultraBoost.map((value, i) => (
-            <BoostDetails products={value} />
-          ))}
+    if (this.props.view === 'productDetails') {
+      toRender = (
+        <div>
+          <div className={style.boost}>
+            {ultraBoost.map((value, i) => (
+              <BoostDetails products={value} />
+            ))}
+          </div>
+
+          <div className={style.pictureFeed}>
+            <div className="elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9" />
+          </div>
         </div>
-
-        <div className="pictureFeed">
-          <div className="elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9" />
-        </div>
-
-        <div className="mainRecContainer">
+      );
+    } else if (this.props.view === 'recommended') {
+      toRender = (
+        <div className={style.mainRecContainer}>
           <h2>You May Also Like</h2>
-          <div className="recRow">
-            <div className="recPadding">
-              <div className="recTransformer">
+          <div className={style.recRow}>
+            <div className={style.recPadding}>
+              <div className={style.recTransformer}>
                 <span>
                   <Carousel products={selectedRecs} />
                 </span>
@@ -90,12 +97,14 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-
-        <div className="mainRecContainer">
+      );
+    } else if (this.props.view === 'othersAlsoBought') {
+      toRender = (
+        <div className={style.mainRecContainer}>
           <h2>Others Also Bought</h2>
-          <div className="recRow">
-            <div className="recPadding">
-              <div className="recTransformer">
+          <div className={style.recRow}>
+            <div className={style.recPadding}>
+              <div className={style.recTransformer}>
                 <span>
                   <Carousel products={selectedOtherBought} />
                 </span>
@@ -103,12 +112,14 @@ export default class App extends Component {
             </div>
           </div>
         </div>
-
-        <div className="mainRecContainer">
+      );
+    } else if (this.props.view === 'recentlyViewed') {
+      toRender = (
+        <div className={style.mainRecContainer}>
           <h2>Recently Viewed Items</h2>
-          <div className="recRow">
-            <div className="recPadding">
-              <div className="recTransformer">
+          <div className={style.recRow}>
+            <div className={style.recPadding}>
+              <div className={style.recTransformer}>
                 <span>
                   <Carousel products={selectedRecent} />
                 </span>
@@ -116,6 +127,17 @@ export default class App extends Component {
             </div>
           </div>
         </div>
+      );
+    }
+
+    return (
+      <div className={style.wrapper}>
+        {toRender}
+        {/* <div>
+          {oneProduct.map((value, i) => (
+            <ProductDetails products={value} />
+          ))}
+        </div> */}
       </div>
     );
   }

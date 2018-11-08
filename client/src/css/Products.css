@@ -80,7 +80,7 @@ margin-right: auto; */
   bottom: -2px;
 }
 
-.rating {
+.timRating {
   display: flex;
   flex-direction: row;
   height: 14px;
