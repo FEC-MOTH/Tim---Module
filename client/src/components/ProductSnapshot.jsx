@@ -19,7 +19,7 @@ const ProductSnapshot = function(props) {
           {details.map(detail => (
             <div className={style.detailCard}>
               <div className={style.deets}>
-                <h3>{detail[0]}</h3>
+                <h3 className={style.h3}>{detail[0]}</h3>
                 <p className={style.deetsP}>{detail[1]}</p>
                 <p className={style.deetsP2}>{detail[2]}</p>
               </div>
