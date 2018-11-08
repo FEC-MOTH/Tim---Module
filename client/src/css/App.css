@@ -10,17 +10,6 @@
     format('woff2');
 }
 
-/* main Css */
-body {
-  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-style: normal;
-  /* font-size: 16px; */
-  height: 100%;
-  width: 100%;
-  overflow-x: hidden;
-}
-
 .wrapper {
   margin-right: auto;
   margin-left: auto;
@@ -29,6 +18,13 @@ body {
   padding-left: 10px;
   display: flex;
   justify-content: center;
+  font-family: AdihausDIN, Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  /* font-size: 16px; */
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 /* for h2 only  */
@@ -98,7 +94,10 @@ body {
   border: 0px;
   /* margin-right: -59px; */
   justify-content: center;
-  text-align: end;
   position: relative;
   left: 47px;
+}
+
+.elfsight-app-63ecb780-3c15-47e5-89b8-9ea83d0343c9 {
+  /* z-index: auto; */
 }
