@@ -11,21 +11,6 @@
 }
 
 /* main Css */
-h1 {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  flex-shrink: 0;
-  font-family: AdineuePRO, Helvetica, Arial, sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  text-transform: uppercase;
-  margin-bottom: 20px;
-  letter-spacing: 0.5px;
-  font-size: 42px;
-  line-height: 38px;
-}
-
 body {
   font-family: AdihausDIN, Helvetica, Arial, sans-serif;
   font-weight: 500;
@@ -47,7 +32,7 @@ body {
 }
 
 /* for h2 only  */
-h2 {
+.h2 {
   font-family: AdineuePRO, Helvetica, Arial, sans-serif;
   font-weight: 600;
   font-style: normal;

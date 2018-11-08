@@ -38,7 +38,7 @@ export default class ProductDetails extends Component {
     return (
       <div className={style.productParent}>
         <div>
-          <h1>Product Details</h1>
+          <h1 className={style.h1}>Product Details</h1>
           <div>
             <ul className={style.toggleList}>
               {/* Button renders another Div to show either description */}

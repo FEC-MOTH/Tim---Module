@@ -34,7 +34,7 @@ export default class ProductDetails extends Component {
     return (
       <div className={style.boostParent}>
         <div>
-          <h1>Product Details</h1>
+          <h1 className={style.h1}>Product Details</h1>
           <div>
             <ul className={style.boostList}>
               <li
@@ -87,7 +87,7 @@ export default class ProductDetails extends Component {
           </div>
         </div>
         <div className={style.snapshot}>
-          <h1>Product Snapshot</h1>
+          <h1 className={style.h1}>Product Snapshot</h1>
           <div className={style.snapshotParent}>
             <ProductSnapshot snapshots={exportObj} />
           </div>

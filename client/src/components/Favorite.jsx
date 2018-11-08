@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/Favorite.css';
 
 const Favorite = function(props) {
   return (

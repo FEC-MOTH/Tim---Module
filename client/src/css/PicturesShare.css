@@ -5,3 +5,18 @@
   text-align: center;
   font-size: 16px;
 }
+
+.h1 {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-shrink: 0;
+  font-family: AdineuePRO, Helvetica, Arial, sans-serif;
+  font-weight: 750;
+  font-style: normal;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  font-size: 42px;
+  line-height: 38px;
+}

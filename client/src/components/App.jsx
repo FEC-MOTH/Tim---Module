@@ -21,14 +21,7 @@ export default class App extends Component {
 
   componentDidMount() {
     this.fetchData();
-    // this.toRender();
   }
-
-  // toRender() {
-  //   this.setState({
-  //     toRender: this.props.view,
-  //   });
-  // }
 
   fetchData() {
     axios
@@ -86,7 +79,7 @@ export default class App extends Component {
     } else if (this.props.view === 'recommended') {
       toRender = (
         <div className={style.mainRecContainer}>
-          <h2>You May Also Like</h2>
+          <h2 className={style.h2}>You May Also Like</h2>
           <div className={style.recRow}>
             <div className={style.recPadding}>
               <div className={style.recTransformer}>
@@ -101,7 +94,7 @@ export default class App extends Component {
     } else if (this.props.view === 'othersAlsoBought') {
       toRender = (
         <div className={style.mainRecContainer}>
-          <h2>Others Also Bought</h2>
+          <h2 className={style.h2}>Others Also Bought</h2>
           <div className={style.recRow}>
             <div className={style.recPadding}>
               <div className={style.recTransformer}>
@@ -116,7 +109,7 @@ export default class App extends Component {
     } else if (this.props.view === 'recentlyViewed') {
       toRender = (
         <div className={style.mainRecContainer}>
-          <h2>Recently Viewed Items</h2>
+          <h2 className={style.h2}>Recently Viewed Items</h2>
           <div className={style.recRow}>
             <div className={style.recPadding}>
               <div className={style.recTransformer}>
