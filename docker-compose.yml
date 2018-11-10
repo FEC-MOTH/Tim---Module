@@ -12,7 +12,7 @@ services:
       MYSQL_PASSWORD: timtran
     ports:
       - '3307:3306'
-    command: '--innodb_use_native_aio=0'
+    # command: '--innodb_use_native_aio=0'
 
   app:
     container_name: app
