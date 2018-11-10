@@ -1,0 +1,37 @@
+version: '3'
+services:
+  productDB:
+    image: mysql:5.7
+    restart: always
+    volumes:
+      - ./docker/data/db:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: timtran
+      MYSQL_DATABASE: fec
+      MYSQL_USER: root
+      MYSQL_PASSWORD: timtran
+    ports:
+      - '3307:3306'
+    command: '--innodb_use_native_aio=0'
+
+  app:
+    container_name: app
+    restart: always
+    build: .
+    ports:
+      - '80:1128'
+    links:
+      - productDB
+    # depends_on:
+    #   - productDB
+    # port:
+    # - '3307:3306'
+  #   container_name: docker-node-sql #this is the name of the actual container
+  #   restart: always #restarts the server if it fails
+  #   build: . #builds the image
+  #   ports: -'80:1128' #posssibly need to use default port
+  #   links: - sequelize #look for sql
+  # mysql:
+  #   container_name: sequelize
+  #   image: #search for sql
+  #   ports: - '27017:27017'

@@ -2,5 +2,3 @@ node_modules
 client/dist/bundle.js
 config.js
 .env
-Dockerfile 
-docker-compose.yml
