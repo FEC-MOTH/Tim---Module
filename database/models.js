@@ -33,9 +33,9 @@ const Products = dbConnection.define(
     image: { type: Sequelize.STRING(1000) },
   },
 
-  {
-    timestamps: false,
-  },
+  // {
+  //   timestamps: false,
+  // },
 );
 
 Products.sync()
