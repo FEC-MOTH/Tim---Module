@@ -24,7 +24,7 @@
   /* font-size: 16px; */
   height: 100%;
   width: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
 /* for h2 only  */
@@ -48,9 +48,10 @@
 }
 
 .mainRecContainer {
-  margin-top: 140px;
+  margin-top: 108px;
   padding-bottom: 86px;
   width: 1147.5px;
+  margin-bottom: 10px;
 }
 
 .recRow {
