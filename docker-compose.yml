@@ -16,12 +16,12 @@ services:
     # command: '--innodb_use_native_aio=0'
 
   app:
-    container_name: app
+    container_name: tim
     restart: always
     build: .
     ports:
       - '3002:3002'
-    links:
+    depends_on:
       - productDB
     # depends_on:
     #   - productDB
