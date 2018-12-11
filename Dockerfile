@@ -11,7 +11,7 @@ RUN npm install
 # Copy whatever it is here, we will copy it over to this file. 
 COPY . .
 
-EXPOSE 1128 
+EXPOSE 3002 
 
 RUN npm run build
 

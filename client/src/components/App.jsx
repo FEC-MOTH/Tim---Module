@@ -16,8 +16,8 @@ export default class App extends Component {
       toRender: '',
     };
     this.fetchData = this.fetchData.bind(this);
-    //axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
-    axios.defaults.baseURL = 'http://ec2-34-222-132-67.us-west-2.compute.amazonaws.com';
+    // axios.defaults.baseURL = 'http://' + process.env.HOSTNAME + ':' + process.env.PORT;
+    axios.defaults.baseURL = 'http://54.146.229.91:3002';
   }
 
   componentDidMount() {

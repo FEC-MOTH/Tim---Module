@@ -16,7 +16,7 @@
     "start": "nodemon server/server.js",
     "build": "webpack",
     "react-dev": "webpack -w",
-    "test": "jest",
+    "test": "jest -w",
     "seed": "node database/seed/seed.js"
   },
   "dependencies": {
@@ -43,7 +43,7 @@
     "mysql": "^2.16.0",
     "mysql2": "^1.6.1",
     "node": "^11.0.0",
-    "nodemon": "^1.18.4",
+    "nodemon": "^1.18.8",
     "path": "^0.12.7",
     "react": "^16.6.0",
     "react-dom": "^16.6.0",
