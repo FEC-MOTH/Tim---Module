@@ -1,10 +1,10 @@
 # Tim---Module
 
-Carousel and Product Details\
+Carousel and Product Details
 
-Please run the followings information:\
+Please run the followings information:
 
-npm install -- to install all dependencies\
+npm install -- to install all dependencies
 npm start - for server\
 npm run build - for webpack
 
