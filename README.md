@@ -10,7 +10,7 @@ All components shown in 10 seconds preview are fully modular microservices. They
 ## Demo of All Components Proxied Together
 > http://54.146.229.91/
 
-<img src="https://camo.githubusercontent.com/99505368247b99dc6091811a1ee009360ef70705/68747470733a2f2f6d656469612e67697068792e636f6d2f6d656469612f6a6b5a6756414858744748665246754336352f67697068792e676966" alt="Quick Look" data-canonical-src="https://media.giphy.com/media/jkZgVAHXtGHfRFuC65/giphy.gif" width="1024" height="1024">
+![Quick Demo](https://media.giphy.com/media/jkZgVAHXtGHfRFuC65/giphy.gif)
 
 ## Components rendered from this repo
 > http://54.146.229.91:3002
