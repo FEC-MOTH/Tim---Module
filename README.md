@@ -2,7 +2,7 @@
 
 This repository contains mocked examples of the Carousels and Product Details sections of an Adidas' product page as they appeared on December 2018. 
 
-**Tech Stack**\
+**Tech Stack**
 React | Express | mySql | Amazon EC2 | Docker | Jest
 
 All components shown in 10 seconds preview are fully modular microservices. They can be integrated with one another seamlessly.
@@ -12,7 +12,7 @@ All components shown in 10 seconds preview are fully modular microservices. They
 
 ![Quick Look](https://media.giphy.com/media/jkZgVAHXtGHfRFuC65/giphy.gif)
 
-## Components rendered from this repo\
+## Components rendered from this repo
 > http://54.146.229.91:3002
 
 ## Local Installation
@@ -23,8 +23,8 @@ As of December 2018, there are issues with npm packages. Components may not func
 Please run the followings information:
 
 ```
-npm install -- to install all dependencies\
-npm start - for server\
+npm install -- to install all dependencies
+npm start - for server
 npm run build - for webpack
 ```
 
