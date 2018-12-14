@@ -15,11 +15,11 @@ All components shown in 10 seconds preview are fully modular microservices. They
 ## Components rendered from this repo
 > http://54.146.229.91:3002
 
-## Local Installation\
+## Local Installation
 **IMPORTANT**\
 As of December 2018, there are issues with npm packages. Components may not function correctly when run locally. 
 
-## How to run file locally \
+## How to run file locally 
 Please run the followings information:
 
 ```
