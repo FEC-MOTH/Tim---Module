@@ -10,7 +10,7 @@ All components shown in 10 seconds preview are fully modular microservices. They
 ## Demo of All Components Proxied Together
 > http://54.146.229.91/
 
-![Alt Text](https://giphy.com/gifs/jkZgVAHXtGHfRFuC65/html5)
+![Quick Look](https://media.giphy.com/media/jkZgVAHXtGHfRFuC65/giphy.gif)
 
 ## Components rendered from this repo\
 > http://54.146.229.91:3002
